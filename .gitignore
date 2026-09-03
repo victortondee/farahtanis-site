@@ -1,0 +1,3 @@
+# build artefact for the Claude preview only - not part of the site
+artifact.html
+.DS_Store
