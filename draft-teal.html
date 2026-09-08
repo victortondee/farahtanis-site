@@ -81,6 +81,12 @@ p{margin:0 0 1.15rem}
 .btn-ghost:hover{background:var(--teal-deep); color:var(--cream)}
 .cta-row{display:flex; flex-wrap:wrap; gap:0.9rem; margin-top:1.9rem}
 
+/* A narrow strip between sections. The page runs long, and this sits right after
+   someone has read what the consultation actually involves - the point at which
+   they are most likely to want it. */
+.bookstrip{padding-block:1.5rem; background:var(--teal-tint); border-block:1px solid var(--teal-line)}
+.bookstrip .wrap{display:flex; justify-content:center}
+
 /* ---------- hero ---------- */
 .hero{background:var(--cream); padding-block:clamp(2.6rem,6vw,4.4rem)}
 .hero-grid{display:grid; grid-template-columns:1fr 19rem; gap:clamp(1.8rem,5vw,3.4rem); align-items:center}
@@ -203,6 +209,12 @@ footer .fwrap{display:flex; flex-wrap:wrap; gap:0.6rem 1.6rem; justify-content:s
     </ul>
   </div>
 </section>
+
+<div class="bookstrip">
+  <div class="wrap">
+    <a class="btn btn-primary" href="#book">Book a consultation</a>
+  </div>
+</div>
 
 <section>
   <div class="wrap">
