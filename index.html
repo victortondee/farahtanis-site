@@ -26,10 +26,16 @@
   --ff-display:'Fraunces',Georgia,serif;
   --ff-body:'Spectral',Georgia,serif;
   --ff-ui:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
+  --terra-line:rgba(153,78,51,0.30); --terra-tint:rgba(153,78,51,0.08);
+  --terra-tint-2:rgba(153,78,51,0.13); --terra-tint-3:rgba(153,78,51,0.19);
+  --focus:#8A4632;
   --maxw:64rem; --radius:0.9rem;
   --ease:cubic-bezier(.22,.61,.36,1);
 }
 *{box-sizing:border-box}
+/* The site shipped with no focus styles. The rate cards are links now, so a
+   keyboard visitor needs to see where they are. */
+:focus-visible{outline:3px solid var(--focus); outline-offset:3px; border-radius:0.35rem}
 html{scroll-behavior:smooth}
 body{
   margin:0; background:var(--paper); color:var(--ink);
@@ -97,13 +103,29 @@ p{margin:0 0 1.15rem}
 
 /* ---------- pricing ---------- */
 .rates{display:grid; grid-template-columns:repeat(2,1fr); gap:1.2rem; margin-top:2rem}
-.rate{border:1px solid var(--line); border-radius:var(--radius); padding:1.8rem 1.6rem;
-  background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(255,255,255,.15))}
+.rate{
+  position:relative; overflow:hidden; display:block; cursor:pointer;
+  text-decoration:none; color:inherit;
+  border:1px solid var(--terra-line); border-radius:var(--radius);
+  padding:1.9rem 1.6rem 1.6rem;
+  background:linear-gradient(180deg,var(--terra-tint),var(--terra-tint-2));
+  transition:transform .35s var(--ease), background .3s var(--ease), box-shadow .35s var(--ease);
+}
+.rate::before{content:""; position:absolute; inset:0 0 auto 0; height:4px;
+  background:linear-gradient(90deg,var(--terra),var(--terra-deep))}
+.rate:hover{transform:translateY(-3px);
+  background:linear-gradient(180deg,var(--terra-tint-2),var(--terra-tint-3));
+  box-shadow:0 18px 38px -24px rgba(138,70,50,.7)}
 .rate .dur{font-family:var(--ff-display); font-weight:300; font-size:1.85rem;
   line-height:1.12; letter-spacing:-0.015em; color:var(--ink)}
 .rate .amt{font-family:var(--ff-ui); font-weight:600; font-size:1.02rem; letter-spacing:0.09em;
   line-height:1; color:var(--terra-deep); margin:0.62rem 0 0.85rem}
 .rate p{margin:0; font-size:0.95rem; color:var(--ink-2)}
+.rate .go{display:inline-flex; align-items:center; gap:0.5em; margin-top:1.05rem;
+  font-family:var(--ff-ui); font-weight:600; font-size:0.72rem; letter-spacing:0.16em;
+  text-transform:uppercase; color:var(--terra-deep)}
+.rate .go .arrow{transition:transform .3s var(--ease)}
+.rate:hover .go .arrow{transform:translateX(0.3rem)}
 
 .hours{margin-top:2rem; border-left:3px solid var(--clay); padding:0.2rem 0 0.2rem 1.2rem}
 .hours dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:0.45rem 1.4rem; font-size:0.98rem}
@@ -226,16 +248,20 @@ footer .fwrap{display:flex; flex-wrap:wrap; gap:0.6rem 1.6rem; justify-content:s
     <h2 style="margin-top:0.8rem;">Choose the time you need</h2>
 
     <div class="rates">
-      <div class="rate">
+      <a class="rate" href="https://calendly.com/farah-tanis/30min"
+         onclick="return openCal('https://calendly.com/farah-tanis/30min')">
         <div class="dur">30 minutes</div>
         <div class="amt">$45</div>
         <p>A focused conversation &mdash; one question, one decision, one next step.</p>
-      </div>
-      <div class="rate">
+        <span class="go">Book this <span class="arrow" aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a class="rate" href="https://calendly.com/farah-tanis/60min"
+         onclick="return openCal('https://calendly.com/farah-tanis/60min')">
         <div class="dur">One hour</div>
         <div class="amt">$80</div>
         <p>Room to tell the fuller story and begin your Personal Recovery Map.</p>
-      </div>
+        <span class="go">Book this <span class="arrow" aria-hidden="true">&rarr;</span></span>
+      </a>
     </div>
 
     <div class="hours">
