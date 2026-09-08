@@ -12,6 +12,16 @@
 <meta property="og:description" content="A private trauma, stress and body consultation with Farah Tanis. Somatic support for people navigating illness, survivorship, chronic stress, grief, burnout, or a major life transition.">
 <meta property="og:image" content="https://farahtanis.com/images/farah-tanis.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<script>
+  /* Runs before first paint so the reveal pre-state never flashes. A visitor who
+     has asked for reduced motion never gets the class, so none of the motion CSS
+     can match for them. */
+  try{
+    if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      document.documentElement.classList.add('anim');
+    }
+  }catch(e){}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Spectral:ital,wght@0,300;0,400;1,300&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -36,7 +46,6 @@
 /* The site shipped with no focus styles. The rate cards are links now, so a
    keyboard visitor needs to see where they are. */
 :focus-visible{outline:3px solid var(--focus); outline-offset:3px; border-radius:0.35rem}
-html{scroll-behavior:smooth}
 body{
   margin:0; background:var(--paper); color:var(--ink);
   font-family:var(--ff-body); font-size:1.05rem; line-height:1.64;
@@ -151,6 +160,65 @@ footer{background:var(--ink-deep); color:var(--cream); padding-block:2.6rem;
 footer a{color:var(--cream)}
 footer .fwrap{display:flex; flex-wrap:wrap; gap:0.6rem 1.6rem; justify-content:space-between; align-items:center}
 
+
+/* ---------- macro motion ----------------------------------------------------
+   Sections reveal as they enter the viewport: a short rise and fade, with their
+   children staggered so a block assembles rather than snapping in. Slow easing
+   on purpose - this page is read by people who are unwell, and quick or bouncy
+   motion reads as pressure.
+
+   Three ways it stays safe:
+     - the whole thing lives inside prefers-reduced-motion: no-preference
+     - .anim is set by an inline script in <head>, so the hidden pre-state is in
+       place before first paint and nothing flashes
+     - if that script never runs, or IntersectionObserver is missing, no rule
+       below matches and the page renders as plain static HTML
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: no-preference){
+  html{scroll-behavior:smooth}
+
+  .anim .rv:not(.hero) > .wrap > *:not(.facts):not(.rates),
+  .anim .rv .facts > li,
+  .anim .rv .rates > .rate,
+  .anim .hero.rv .hero-grid > div > *{
+    opacity:0; transform:translateY(1.5rem);
+    transition:opacity .85s var(--ease), transform .85s var(--ease);
+  }
+  .anim .hero.rv .hero-photo{
+    opacity:0; transform:translateY(1.5rem) scale(.975);
+    transition:opacity 1.1s var(--ease), transform 1.1s var(--ease);
+  }
+  .anim .rv.in:not(.hero) > .wrap > *:not(.facts):not(.rates),
+  .anim .rv.in .facts > li,
+  .anim .rv.in .rates > .rate,
+  .anim .hero.rv.in .hero-grid > div > *,
+  .anim .hero.rv.in .hero-photo{ opacity:1; transform:none; }
+
+  /* The eyebrow's rule draws itself out as the section arrives. */
+  .anim .rv .eyebrow::before{width:0; transition:width .75s var(--ease) .2s}
+  .anim .rv.in .eyebrow::before{width:1.9rem}
+
+  /* Stagger. Explicit steps rather than a loop - CSS cannot multiply an nth index. */
+  .anim .rv:not(.hero) > .wrap > *:nth-child(2){transition-delay:.09s}
+  .anim .rv:not(.hero) > .wrap > *:nth-child(3){transition-delay:.18s}
+  .anim .rv:not(.hero) > .wrap > *:nth-child(4){transition-delay:.27s}
+  .anim .rv:not(.hero) > .wrap > *:nth-child(5){transition-delay:.36s}
+  .anim .rv:not(.hero) > .wrap > *:nth-child(n+6){transition-delay:.45s}
+  .anim .hero.rv .hero-grid > div > *:nth-child(2){transition-delay:.10s}
+  .anim .hero.rv .hero-grid > div > *:nth-child(3){transition-delay:.20s}
+  .anim .hero.rv .hero-grid > div > *:nth-child(4){transition-delay:.30s}
+  .anim .hero.rv .hero-grid > div > *:nth-child(5){transition-delay:.40s}
+  .anim .hero.rv .hero-photo{transition-delay:.16s}
+  .anim .rv .facts > li:nth-child(1){transition-delay:.06s}
+  .anim .rv .facts > li:nth-child(2){transition-delay:.13s}
+  .anim .rv .facts > li:nth-child(3){transition-delay:.20s}
+  .anim .rv .facts > li:nth-child(4){transition-delay:.27s}
+  .anim .rv .facts > li:nth-child(5){transition-delay:.34s}
+  .anim .rv .facts > li:nth-child(6){transition-delay:.41s}
+  .anim .rv .facts > li:nth-child(n+7){transition-delay:.48s}
+  .anim .rv .rates > .rate:nth-child(2){transition-delay:.12s}
+}
+
 @media (max-width:760px){
   .hero-grid{grid-template-columns:1fr}
   .hero-photo{order:-1; max-width:14rem}
@@ -162,7 +230,7 @@ footer .fwrap{display:flex; flex-wrap:wrap; gap:0.6rem 1.6rem; justify-content:s
 </head>
 <body>
 
-<header class="hero">
+<header class="rv hero">
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow">A private consultation</span>
@@ -183,7 +251,7 @@ footer .fwrap{display:flex; flex-wrap:wrap; gap:0.6rem 1.6rem; justify-content:s
   </div>
 </header>
 
-<section>
+<section class="rv">
   <div class="wrap narrow">
     <span class="eyebrow">Why I offer this</span>
     <p class="lede" style="margin-top:1.2rem;">When I was diagnosed with triple-negative breast cancer, I had to look beyond the diagnosis.</p>
@@ -196,7 +264,7 @@ footer .fwrap{display:flex; flex-wrap:wrap; gap:0.6rem 1.6rem; justify-content:s
   </div>
 </section>
 
-<section class="alt" id="what">
+<section class="rv alt" id="what">
   <div class="wrap">
     <span class="eyebrow">During our consultation</span>
     <h2 style="margin-top:0.8rem;">We will</h2>
@@ -212,13 +280,13 @@ footer .fwrap{display:flex; flex-wrap:wrap; gap:0.6rem 1.6rem; justify-content:s
   </div>
 </section>
 
-<div class="bookstrip">
+<div class="rv bookstrip">
   <div class="wrap">
     <a class="btn btn-primary" href="#book">Book a consultation</a>
   </div>
 </div>
 
-<section>
+<section class="rv">
   <div class="wrap">
     <span class="eyebrow">Who this is for</span>
     <h2 style="margin-top:0.8rem;">This consultation may be especially meaningful for</h2>
@@ -233,7 +301,7 @@ footer .fwrap{display:flex; flex-wrap:wrap; gap:0.6rem 1.6rem; justify-content:s
   </div>
 </section>
 
-<section class="alt">
+<section class="rv alt">
   <div class="wrap narrow">
     <span class="eyebrow">What you will leave with</span>
     <p class="lede" style="margin-top:1.2rem;">You will leave with language for what you have been experiencing, a clearer understanding of your survival patterns, practical somatic practices, questions for your care team, and the beginning of a compassionate Personal Recovery Map.</p>
@@ -242,7 +310,7 @@ footer .fwrap{display:flex; flex-wrap:wrap; gap:0.6rem 1.6rem; justify-content:s
   </div>
 </section>
 
-<section id="book">
+<section class="rv" id="book">
   <div class="wrap">
     <span class="eyebrow">Booking</span>
     <h2 style="margin-top:0.8rem;">Choose the time you need</h2>
@@ -293,7 +361,7 @@ footer .fwrap{display:flex; flex-wrap:wrap; gap:0.6rem 1.6rem; justify-content:s
   </div>
 </section>
 
-<section class="alt">
+<section class="rv alt">
   <div class="wrap narrow letter">
     <span class="eyebrow">A love letter to those who survived illness</span>
     <h2 style="margin-top:0.8rem;">You were never meant to heal alone</h2>
@@ -328,6 +396,30 @@ footer .fwrap{display:flex; flex-wrap:wrap; gap:0.6rem 1.6rem; justify-content:s
     }
     return true;
   }
+</script>
+<script>
+  /* Reveal on entry, once per section. Every failure path ends with the content
+     visible: no observer, or anything thrown, and .anim comes straight back off. */
+  (function(){
+    var root = document.documentElement;
+    if(!root.classList.contains('anim')) return;
+    function showAll(){ root.classList.remove('anim'); }
+    if(!('IntersectionObserver' in window)){ showAll(); return; }
+    try{
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+        });
+      }, {rootMargin:'0px 0px -10% 0px', threshold:0.08});
+      document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+      /* Last resort: if anything has still not been revealed, stop hiding it. */
+      setTimeout(function(){
+        document.querySelectorAll('.rv:not(.in)').forEach(function(el){
+          if(el.getBoundingClientRect().top < window.innerHeight) el.classList.add('in');
+        });
+      }, 2500);
+    }catch(e){ showAll(); }
+  })();
 </script>
 </body>
 </html>
