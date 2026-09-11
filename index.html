@@ -421,5 +421,30 @@ footer .fwrap{display:flex; flex-wrap:wrap; gap:0.6rem 1.6rem; justify-content:s
     }catch(e){ showAll(); }
   })();
 </script>
+<!-- Cloudflare Web Analytics. Cookieless, so no consent banner, and nothing about
+     who is reading a page on illness and trauma leaves for an ad network. Loads only
+     on the real domain, so localhost and previews never count. Deliberately absent
+     from the draft pages, so reviewing a draft never counts either.
+
+     Personal opt-out: visit farahtanis.com/?analytics=off once on a device and that
+     browser stops being counted for good (?analytics=on turns it back on). Worth
+     doing on Farah's and the team's devices - on a site this size, the people who
+     built it would otherwise be a real share of the numbers. -->
+<script>
+  (function () {
+    var CF_TOKEN = "aee36a1283884037ad015bedb9a8c114";
+    if (!/(^|\.)farahtanis\.com$/.test(location.hostname)) return;
+    try {
+      if (location.search.indexOf('analytics=off') > -1) localStorage.setItem('ftNoAnalytics', '1');
+      else if (location.search.indexOf('analytics=on') > -1) localStorage.removeItem('ftNoAnalytics');
+      if (localStorage.getItem('ftNoAnalytics') === '1') return;
+    } catch (e) {}
+    var b = document.createElement("script");
+    b.defer = true;
+    b.src = "https://static.cloudflareinsights.com/beacon.min.js";
+    b.setAttribute("data-cf-beacon", JSON.stringify({ token: CF_TOKEN }));
+    document.head.appendChild(b);
+  })();
+</script>
 </body>
 </html>
