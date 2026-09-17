@@ -1,3 +1,15 @@
+# Working material: drafts, style guide, exports, tools. Kept beside the site on
+# this Mac, deliberately out of the repo - GitHub Pages publishes everything that
+# is committed here, and none of this belongs on farahtanis.com.
+project/
+
 # build artefact for the Claude preview only - not part of the site
 artifact.html
 .DS_Store
+
+# the preview server config is local tooling, not part of the site
+.claude/
+
+# local tooling for the comparison script
+node_modules/
+project/tools/compare-report.html

@@ -1,0 +1,13 @@
+{
+  "name": "farahtanis-tools",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Local tooling for the site: the chrome comparison against restoreny.org.",
+  "scripts": {
+    "compare": "node project/tools/compare-chrome.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}
