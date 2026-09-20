@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /draft-teal.html
 
 Sitemap: https://farahtanis.com/sitemap.xml

@@ -3,23 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Your Body Has Been Speaking — A Private Consultation with Farah Tanis</title>
-<meta name="description" content="A private trauma, stress and body consultation with Farah Tanis. Somatic support for people navigating illness, survivorship, chronic stress, grief, burnout, or a major life transition.">
-<link rel="canonical" href="https://farahtanis.com/">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://farahtanis.com/">
-<meta property="og:title" content="Your Body Has Been Speaking — A Private Consultation with Farah Tanis">
-<meta property="og:description" content="A private trauma, stress and body consultation with Farah Tanis. Somatic support for people navigating illness, survivorship, chronic stress, grief, burnout, or a major life transition.">
+<title>About Farah Tanis — Founder, Restore Forward</title>
+<meta name="description" content="Farah Tanis is a Black feminist healer, historian and movement builder: founder of Restore Forward, co-founder of Black Women's Blueprint and the Museum of Women's Resistance.">
+<link rel="canonical" href="https://farahtanis.com/about.html">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://farahtanis.com/about.html">
+<meta property="og:title" content="About Farah Tanis — Founder, Restore Forward">
+<meta property="og:description" content="A Black feminist healer, historian and movement builder: founder of Restore Forward, co-founder of Black Women's Blueprint and the Museum of Women's Resistance.">
 <meta property="og:image" content="https://farahtanis.com/images/farah-og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#59637E">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<link rel="preload" as="image" href="images/farah-portrait.webp" type="image/webp">
 <script>
-  /* Runs before first paint so the reveal pre-state never flashes. A visitor who
-     has asked for reduced motion never gets the class, so none of the motion CSS
-     can match for them. */
+  /* Runs before first paint so the reveal pre-state never flashes; nothing for
+     readers who have asked for reduced motion. */
   try{
     if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
       document.documentElement.classList.add('anim');
@@ -31,25 +29,25 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "A private trauma, stress and body consultation",
-  "serviceType": "Somatic consultation",
-  "url": "https://farahtanis.com/",
-  "provider": {
-    "@type": "Person",
-    "name": "Farah Tanis",
-    "jobTitle": "Founder, Restore Forward",
-    "url": "https://farahtanis.com/",
-    "image": "https://farahtanis.com/images/farah-og.jpg",
-    "worksFor": {"@type": "Organization", "name": "Restore Forward", "url": "https://restoreny.org"}
-  },
-  "offers": [
-    {"@type": "Offer", "name": "30 minutes", "price": "45", "priceCurrency": "USD", "url": "https://calendly.com/farah-tanis/30min"},
-    {"@type": "Offer", "name": "One hour", "price": "80", "priceCurrency": "USD", "url": "https://calendly.com/farah-tanis/60min"}
+  "@type": "Person",
+  "name": "Farah Tanis",
+  "url": "https://farahtanis.com/about.html",
+  "image": "https://farahtanis.com/images/farah-og.jpg",
+  "jobTitle": "Founder, Restore Forward",
+  "worksFor": {"@type": "Organization", "name": "Restore Forward", "url": "https://restoreny.org"},
+  "sameAs": [
+    "https://www.instagram.com/iamfarahtanis/",
+    "https://www.linkedin.com/in/farah-tanis/",
+    "https://x.com/FarahTanis1",
+    "https://www.facebook.com/farah.tanis/"
   ]
 }
 </script>
+<!-- This page carries a copy of the site's CSS from index.html, between the markers
+     below. After changing the CSS there, run:
+       python3 project/tools/refresh-site-css.py -->
 <style>
+/* site-css:start */
 /* Fonts are served from this site: Google Fonts would see every visitor's address,
    which sits badly on a page about illness. Latin subsets, swapped in as they load. */
 /* fonts:start */
@@ -606,25 +604,62 @@ footer .fcredit{max-width:none; font-size:1.125rem}
   .hours dt:first-of-type{margin-top:0}
   .cta-row{flex-direction:column; align-items:flex-start}
 }
+/* site-css:end */
+</style>
+<style>
+/* ---------- About page only ---------- */
+
+/* Her roles, as a quiet list in the label column. */
+.roles{display:grid; gap:1.5rem; margin:0}
+.roles dt{font:400 var(--t-caps)/1.3 var(--ff-label); letter-spacing:0.04em; text-transform:uppercase; opacity:.8}
+.roles dd{margin:0.4rem 0 0; font:300 var(--t-h5)/1.2 var(--ff-display)}
+
+/* Her words, credited. */
+.cite{margin-top:0.9rem; font:400 var(--t-caps)/1.3 var(--ff-label); letter-spacing:0.04em; text-transform:uppercase}
+.prose .cite{margin-top:-0.6rem}
+
+/* "Along the way": moments in her work, each with its time in large light numerals,
+   the way the consultation page sets its steps. Two columns read top to bottom. */
+.timeline{
+  display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); grid-template-rows:repeat(3,auto); grid-auto-flow:column;
+  column-gap:calc(var(--gutter) * 3); row-gap:clamp(1.8rem,3.4vw,2.8rem);
+  margin:clamp(1.6rem,2.3vw,1.85rem) 0 0; padding:0; list-style:none;
+}
+.timeline li{display:grid; grid-template-columns:clamp(6rem,11vw,9rem) minmax(0,1fr); column-gap:1.2rem; align-items:baseline}
+.timeline .when{font:300 clamp(2.2rem,4.4vw,3.6rem)/0.9 var(--ff-display); font-variant-numeric:lining-nums}
+.timeline p{max-width:24em}
+
+/* Working with her: the two options in brief, and the ways onward. */
+.options{display:grid; gap:1.2rem; margin:0}
+.options dt{font:400 var(--t-caps)/1.3 var(--ff-label); letter-spacing:0.04em; text-transform:uppercase}
+.options dd{margin:0.3rem 0 0; font:300 var(--t-h5)/1.2 var(--ff-display); font-variant-numeric:lining-nums}
+
+@media (max-width:900px){
+  .timeline{grid-template-columns:minmax(0,1fr); grid-template-rows:none; grid-auto-flow:row}
+}
+@media (max-width:640px){
+  .roles dd, .options dd{font-size:var(--t-serif)}
+  .timeline .when{font-size:var(--t-stat)}
+  .timeline li{grid-template-columns:min(24vw,94px) minmax(0,1fr)}
+}
 </style>
 </head>
 <body>
 
-
 <header class="site-top">
   <div class="topbar">
-    <a class="brand" href="#top"><span>Farah Tanis</span><span class="brand-sub">Founder, Restore Forward</span></a>
-    <nav class="topnav" id="topnav" aria-label="On this page">
+    <a class="brand" href="index.html"><span>Farah Tanis</span><span class="brand-sub">Founder, Restore Forward</span></a>
+    <nav class="topnav" id="topnav" aria-label="Site">
       <ul>
-        <li><a href="#why">Why I offer this</a></li>
-        <li><a href="#what">What we&rsquo;ll do</a></li>
-        <li><a href="#who">Who this is for</a></li>
-        <li><a href="#book">Booking</a></li>
-        <li><a href="#letter">A love letter</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#why">Why I offer this</a></li>
+        <li><a href="index.html#what">What we&rsquo;ll do</a></li>
+        <li><a href="index.html#who">Who this is for</a></li>
+        <li><a href="index.html#book">Booking</a></li>
+        <li><a href="index.html#letter">A love letter</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
       </ul>
       <div class="menu-foot">
-        <a class="btn btn-lg" href="#book">Book a consultation</a>
+        <a class="btn btn-lg" href="index.html#book">Book a consultation</a>
         <p>Farah Tanis &middot; Founder, Restore Forward</p>
       </div>
     </nav>
@@ -633,201 +668,112 @@ footer .fcredit{max-width:none; font-size:1.125rem}
     </button>
   </div>
 </header>
-<a class="badge" id="badge" href="#book">Book a<br>Consult</a>
+<a class="badge" id="badge" href="index.html#book">Book a<br>Consult</a>
+
+<!-- DRAFT COPY. Written from the site's own words and public sources (Wikipedia,
+     New Profit, The Feminist Wire, restoreny.org, her social bios). Every line
+     marked CONFIRM needs Farah's team to check it before this page goes live.
+     Personal history found in those sources (childhood, family, relationships)
+     is deliberately left out unless she chooses to include it. -->
 
 <section class="rv band hero" id="top">
   <div class="hero-grid">
     <div class="hero-text">
-      <h1 class="title title-h1">Your body<br>has been<br>speaking</h1>
-      <p class="sub">A private trauma, stress &amp; body consultation with Farah Tanis</p>
-      <p class="lede">Somatic support for people navigating illness, survivorship, chronic stress, grief, burnout, or a major life transition.</p>
+      <h1 class="title title-h1">Farah<br>Tanis</h1>
+      <p class="sub">Healer, historian, movement builder &mdash; founder of Restore Forward</p>
+      <!-- CONFIRM: "more than thirty years" (Wikipedia: activism from around 1993) -->
+      <p class="lede">A Black feminist leader based in New York, Farah has spent more than thirty years creating places where women, survivors and whole communities can be seen, held and heard.</p>
       <div class="cta-row">
-        <a class="btn btn-primary btn-lg" href="#book">Book a consultation</a>
-        <a class="btn btn-ghost btn-lg" href="#what">What we&rsquo;ll do</a>
+        <a class="btn btn-primary btn-lg" href="index.html#book">Book a consultation</a>
+        <a class="btn btn-ghost btn-lg" href="#work">Her work</a>
       </div>
     </div>
     <figure class="hero-photo">
       <picture>
-        <source srcset="images/farah-portrait.webp" type="image/webp">
-        <img src="images/farah-portrait.jpg" alt="Farah Tanis" width="800" height="1000" fetchpriority="high" decoding="async">
+        <source srcset="images/farah-sign.webp" type="image/webp">
+        <img src="images/farah-sign.jpg" alt="Farah Tanis" width="510" height="510" fetchpriority="high" decoding="async">
       </picture>
     </figure>
   </div>
 </section>
 
-<section class="rv band band-slate" id="why">
-  <h2 class="title">Why I offer this</h2>
+<section class="rv band band-slate" id="work">
+  <h2 class="title">A life&rsquo;s work</h2>
   <hr class="rule">
   <div class="grid3">
     <div>
-      <figure class="story-photo px">
-        <picture>
-          <source srcset="images/sunflowers.webp" type="image/webp">
-          <img src="images/sunflowers.jpg" alt="" width="800" height="1212" loading="lazy" decoding="async">
-        </picture>
-      </figure>
+      <dl class="roles">
+        <div><dt>Founder &amp; CEO</dt><dd>Restore Forward</dd></div>
+        <div><dt>Co-founder &amp; Executive Director</dt><dd>Black Women&rsquo;s Blueprint</dd></div>
+        <div><dt>Co-founder</dt><dd>Museum of Women&rsquo;s Resistance</dd></div>
+        <!-- CONFIRM: the commission's exact name (sources differ) -->
+        <div><dt>Chair</dt><dd>Black Women&rsquo;s Truth &amp; Reconciliation Commission</dd></div>
+        <div><dt>Co-founder &amp; former Executive Director</dt><dd>Dwa Fanm</dd></div>
+      </dl>
     </div>
     <div class="span2 prose">
-      <p>When I was diagnosed with triple-negative breast cancer, I had to look beyond the diagnosis.</p>
-      <p>I began examining everything my body had been carrying: trauma, grief, chronic stress, overwork, environmental exposures, the responsibility of caring for others, and years of surviving without enough restoration. I looked closely at how I worked, ate, rested, grieved, loved, protected myself, and responded to danger.</p>
-      <p>My healing journey taught me something profound:</p>
-      <p class="pull">Healing begins when we tell the truth about the body.</p>
-      <p>As a licensed trauma therapist, somatic practitioner, health-sovereignty educator, survivor advocate, and cancer survivor, I now offer private consultations for people who want to understand their bodies and healing journeys more deeply.</p>
-      <p>Our experiences do not remain only in the mind. They can shape our nervous systems, our sense of safety, our relationships with rest and nourishment, and the ways we experience illness, treatment, and recovery.</p>
-      <p><strong>This is not about blaming you for becoming ill.</strong> I will never tell you that you caused your illness. This work is about helping you listen to your body with compassion, recognize what it has endured, and reclaim greater agency over how you care for yourself.</p>
+      <p>Farah began working on behalf of women in the early 1990s, running a women&rsquo;s shelter. She went on to co-found Dwa Fanm, a Haitian women&rsquo;s organization in Brooklyn, and to lead it as executive director.</p>
+      <p>Black Women&rsquo;s Blueprint began in 2008 as sister circles, held on living-room floors and around kitchen tables. Under her leadership it grew into a civil and human rights organization with programs for survivors of gender-based violence, birth education and maternal health, and holistic healing.</p>
+      <p>She convened the first Truth and Reconciliation Commission in the United States focused on Black women&rsquo;s experiences of sexual assault, and co-founded the Museum of Women&rsquo;s Resistance.</p>
+      <p class="pull">&ldquo;The struggle to restore individual and communal mental health is intertwined with racial justice and land justice issues.&rdquo;</p>
+      <p class="cite">Farah Tanis</p>
+      <p>She was a 2012 U.S. Human Rights Institute Fellow, and in 2017 was among the organizers of the March for Black Women in Washington, D.C.</p>
     </div>
   </div>
 </section>
 
-<section class="rv band" id="what">
-  <h2 class="title">During our consultation</h2>
-  <h3 class="heading">We will</h3>
+<section class="rv band" id="path">
+  <h2 class="title">Along the way</h2>
+  <h3 class="heading">Moments from three decades of work</h3>
   <hr class="rule">
-  <ol class="arc">
-    <li><span class="arc-num" aria-hidden="true"><span>1</span></span><p>Tell the fuller story of what your life and body have carried.</p></li>
-    <li><span class="arc-num" aria-hidden="true"><span>2</span></span><p>Explore patterns of trauma, grief, chronic stress, over-functioning, and survival.</p></li>
-    <li><span class="arc-num" aria-hidden="true"><span>3</span></span><p>Identify the signals your body may have been sending before illness, burnout, or collapse.</p></li>
-    <li><span class="arc-num" aria-hidden="true"><span>4</span></span><p>Map the conditions affecting your sleep, energy, relationships, environment, nourishment, and nervous system.</p></li>
-    <li><span class="arc-num" aria-hidden="true"><span>5</span></span><p>Practice somatic tools for grounding, regulation, safety, and reconnection.</p></li>
-    <li><span class="arc-num" aria-hidden="true"><span>6</span></span><p>Identify questions you may want to bring to your physicians or other practitioners.</p></li>
-    <li><span class="arc-num" aria-hidden="true"><span>7</span></span><p>Begin creating your own Personal Recovery Map &mdash; with realistic steps, supportive people, boundaries, practices, and resources.</p></li>
+  <ol class="timeline">
+    <!-- CONFIRM: year (Wikipedia: "around 1993") -->
+    <li><span class="when">1990s</span><p>Begins working on behalf of women, running a women&rsquo;s shelter.</p></li>
+    <li><span class="when">2008</span><p>Black Women&rsquo;s Blueprint begins, as sister circles in living rooms.</p></li>
+    <li><span class="when">2012</span><p>U.S. Human Rights Institute Fellow.</p></li>
+    <li><span class="when">2017</span><p>One of the organizers of the March for Black Women in Washington, D.C.</p></li>
+    <!-- CONFIRM: when the land was acquired, and its acreage (sources say 300 and 453 acres) -->
+    <li><span class="when">2020s</span><p>Leads her community to take on land in upstate New York, alongside Indigenous co-stewards.</p></li>
+    <li><span class="when">Today</span><p>Restore Forward and The Reconciliation Center: a land-based healing ecosystem on 453 acres of forest in Ava, New York.</p></li>
   </ol>
 </section>
 
-<figure class="rv photo-band px">
-  <picture>
-    <source srcset="images/hands.webp" type="image/webp">
-    <img src="images/hands.jpg" alt="" width="1920" height="960" loading="lazy" decoding="async">
-  </picture>
-  <div class="photo-cta"><a class="btn btn-lg" href="#book">Book a consultation</a></div>
-</figure>
-
-<section class="rv band" id="who">
-  <h2 class="title">Who this is for</h2>
-  <h3 class="heading heading-wide">This consultation may be especially meaningful for</h3>
-  <hr class="rule">
-  <div class="grid3 who">
-    <ul>
-      <li>People living with or recovering from serious or chronic illness.</li>
-      <li>People newly diagnosed, receiving treatment, or navigating survivorship.</li>
-    </ul>
-    <ul>
-      <li>Survivors whose bodies have carried trauma for many years.</li>
-      <li>Caregivers, healers, advocates, and leaders who have been strong for too long.</li>
-    </ul>
-    <ul>
-      <li>People experiencing chronic stress, grief, exhaustion, or disconnection from their bodies.</li>
-      <li>Anyone seeking whole-person support alongside their existing medical or therapeutic care.</li>
-    </ul>
-  </div>
-</section>
-
-<section class="rv band band-slate" id="leave">
-  <h2 class="title">What you will leave with</h2>
-  <hr class="rule">
-  <div class="leave">
-      <p class="pull">Your body is not failing you. It has carried you through everything you have survived &mdash; and it may now be asking you to listen differently.</p>
-      <p class="lede">You will leave with language for what you have been experiencing, a clearer understanding of your survival patterns, practical somatic practices, questions for your care team, and the beginning of a compassionate Personal Recovery Map.</p>
-      <p>One conversation could help you understand your health differently, ask better questions, and make new decisions about how you want to live, heal, and care for yourself.</p>
-      <div class="cta-row"><a class="btn btn-primary" href="#book">Book a consultation</a></div>
-    </div>
-</section>
-
-<section class="rv band" id="book">
-  <h2 class="title">Booking</h2>
-  <h3 class="heading">Choose the time you need</h3>
-  <hr class="rule">
-  <div class="grid3">
-    <div>
-      <div class="hours">
-        <dl>
-          <dt>Mon&ndash;Fri</dt><dd>11:00 &ndash; 14:00 &nbsp;<span class="muted">(last booking 13:30)</span></dd>
-          <dt>Sunday</dt><dd>10:00 &ndash; 17:00</dd>
-          <dt>Saturday</dt><dd>Not available</dd>
-        </dl>
-      </div>
-    </div>
-    <div class="span2 stagger">
-      <div class="dials">
-        <a class="dial" style="--arc:50; --deg:180deg" href="https://calendly.com/farah-tanis/30min?background_color=fffbf0&text_color=59637e&primary_color=0c1a2e"
-           onclick="return openCal('https://calendly.com/farah-tanis/30min?background_color=fffbf0&text_color=59637e&primary_color=0c1a2e')">
-          <span class="clock">
-            <svg viewBox="0 0 100 100" aria-hidden="true">
-              <circle class="clock-rim" cx="50" cy="50" r="47"/>
-              <g class="clock-ticks"><line x1="50" y1="4" x2="50" y2="7.5" transform="rotate(0 50 50)"/><line x1="50" y1="4" x2="50" y2="6" transform="rotate(30 50 50)"/><line x1="50" y1="4" x2="50" y2="6" transform="rotate(60 50 50)"/><line x1="50" y1="4" x2="50" y2="7.5" transform="rotate(90 50 50)"/><line x1="50" y1="4" x2="50" y2="6" transform="rotate(120 50 50)"/><line x1="50" y1="4" x2="50" y2="6" transform="rotate(150 50 50)"/><line x1="50" y1="4" x2="50" y2="7.5" transform="rotate(180 50 50)"/><line x1="50" y1="4" x2="50" y2="6" transform="rotate(210 50 50)"/><line x1="50" y1="4" x2="50" y2="6" transform="rotate(240 50 50)"/><line x1="50" y1="4" x2="50" y2="7.5" transform="rotate(270 50 50)"/><line x1="50" y1="4" x2="50" y2="6" transform="rotate(300 50 50)"/><line x1="50" y1="4" x2="50" y2="6" transform="rotate(330 50 50)"/></g>
-              <circle class="clock-sweep" cx="50" cy="50" r="36.5" pathLength="100"/>
-              <line class="clock-hand" x1="50" y1="21" x2="50" y2="6"/>
-            </svg>
-            <span class="clock-text"><span class="num">30</span><span class="unit">Minutes</span></span>
-          </span>
-          <span class="price">$45</span>
-          <p>A focused conversation &mdash; one question, one decision, one next step.</p>
-          <span class="btn btn-primary">Book this</span>
-        </a>
-        <a class="dial" style="--arc:100; --deg:360deg" href="https://calendly.com/farah-tanis/60min?background_color=fffbf0&text_color=59637e&primary_color=0c1a2e"
-           onclick="return openCal('https://calendly.com/farah-tanis/60min?background_color=fffbf0&text_color=59637e&primary_color=0c1a2e')">
-          <span class="clock">
-            <svg viewBox="0 0 100 100" aria-hidden="true">
-              <circle class="clock-rim" cx="50" cy="50" r="47"/>
-              <g class="clock-ticks"><line x1="50" y1="4" x2="50" y2="7.5" transform="rotate(0 50 50)"/><line x1="50" y1="4" x2="50" y2="6" transform="rotate(30 50 50)"/><line x1="50" y1="4" x2="50" y2="6" transform="rotate(60 50 50)"/><line x1="50" y1="4" x2="50" y2="7.5" transform="rotate(90 50 50)"/><line x1="50" y1="4" x2="50" y2="6" transform="rotate(120 50 50)"/><line x1="50" y1="4" x2="50" y2="6" transform="rotate(150 50 50)"/><line x1="50" y1="4" x2="50" y2="7.5" transform="rotate(180 50 50)"/><line x1="50" y1="4" x2="50" y2="6" transform="rotate(210 50 50)"/><line x1="50" y1="4" x2="50" y2="6" transform="rotate(240 50 50)"/><line x1="50" y1="4" x2="50" y2="7.5" transform="rotate(270 50 50)"/><line x1="50" y1="4" x2="50" y2="6" transform="rotate(300 50 50)"/><line x1="50" y1="4" x2="50" y2="6" transform="rotate(330 50 50)"/></g>
-              <circle class="clock-sweep" cx="50" cy="50" r="36.5" pathLength="100"/>
-              <line class="clock-hand" x1="50" y1="21" x2="50" y2="6"/>
-            </svg>
-            <span class="clock-text"><span class="num">60</span><span class="unit">Minutes</span></span>
-          </span>
-          <span class="price">$80</span>
-          <p>Room to tell the fuller story and begin your Personal Recovery Map.</p>
-          <span class="btn btn-primary">Book this</span>
-        </a>
-      </div>
-
-      <!-- Calendly popup; widget.js is loaded once at the foot of the page. The two
-           options above are the links. Both event types are live: /30min at $45 and
-           /60min at $80; the query string colours the widget in the page's palette.
-           Calendly does not redirect a renamed slug, so if either is renamed again
-           these links die silently - they still look fine and lead nowhere. -->
-      <div class="note">
-        <strong>Payment is taken when you book</strong>, and goes to Restore Forward, the non-profit this work belongs to.
-      </div>
-
-      <div class="note">
-        These consultations are educational and supportive. They do not provide medical diagnosis or treatment and do not replace care from your healthcare team. A consultation is not psychotherapy unless we separately establish a therapy relationship in a jurisdiction where I am licensed.
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="rv band band-photo px" id="letter" aria-labelledby="letter-title">
+<section class="rv band band-photo px" id="truth" aria-labelledby="truth-title">
   <picture>
     <source srcset="images/letter.webp" type="image/webp">
     <img src="images/letter.jpg" alt="" width="1920" height="960" loading="lazy" decoding="async">
   </picture>
-  <h2 class="title title-mixed" id="letter-title">You were never meant to heal alone</h2>
-  <p class="heading">A love letter to those who survived illness</p>
+  <h2 class="title title-mixed" id="truth-title">Healing begins when we tell the truth about the body</h2>
+  <p class="heading">Farah Tanis</p>
 </section>
 
-<section class="rv band band-slate letter">
+<section class="rv band band-slate" id="body">
+  <h2 class="title">Why the body</h2>
+  <hr class="rule">
+  <div class="leave">
+    <!-- CONFIRM: training and credentials, including where she is licensed -->
+    <p class="pull">Trained in social work and certified as a family therapist, Farah is a licensed trauma therapist, somatic practitioner and health-sovereignty educator.</p>
+    <p class="lede">When she was diagnosed with triple-negative breast cancer, she looked beyond the diagnosis, to everything her body had been carrying. That journey is the root of the private consultations she offers today.</p>
+    <p>Through Restore Forward, she carries the same understanding onto the land: that life and the body recover at every level at once &mdash; the cellular, the communal and the ecological.</p>
+  </div>
+</section>
+
+<section class="rv band" id="work-with">
+  <h2 class="title">Work with Farah</h2>
+  <hr class="rule">
   <div class="grid3">
     <div>
-      <figure class="letter-portrait">
-        <picture>
-          <source srcset="images/farah-sign.webp" type="image/webp">
-          <img src="images/farah-sign.jpg" alt="Farah Tanis" width="510" height="510" loading="lazy" decoding="async">
-        </picture>
-      </figure>
+      <dl class="options">
+        <div><dt>30 minutes</dt><dd>$45</dd></div>
+        <div><dt>One hour</dt><dd>$80</dd></div>
+      </dl>
     </div>
     <div class="span2 prose">
-      <p class="salutation">Beloved,</p>
-      <p>This is a call to healing. Not the kind that comes only in sterile rooms or printed prescriptions. But the kind that rises from the earth itself. The kind that remembers what our ancestors knew before forgetting became policy. Before healing became industry.</p>
-      <p>There are ways we have forgotten. Ways that knew how to cool inflammation with leaves. Ways that knew how to strengthen blood with roots. Ways that knew how to quiet the nervous system with the rhythm of drum and breath. Ways that taught the body how to return.</p>
-      <p>And now the whisper is rising again. From forests. From farms. From grandmothers who still remember the names of plants. From great-grandmothers whose prayers still hover over our bloodlines.</p>
-      <p>They whisper across time: you were never meant to heal alone.</p>
-      <p class="close">So I ask you now &mdash; gently, with reverence for everything you have endured: are you ready to be well?</p>
-      <div class="signoff">
-        <div class="signoff-name">Farah Tanis<span>Founder, Restore Forward</span></div>
-      </div>
+      <p class="lede">A private trauma, stress &amp; body consultation: somatic support for people navigating illness, survivorship, chronic stress, grief, burnout, or a major life transition.</p>
+      <p>Consultations support the work of Restore Forward.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#book">Book a consultation</a>
+        <a class="btn btn-primary" href="index.html#book">Book a consultation</a>
+        <a class="btn btn-ghost" href="https://restoreny.org" target="_blank" rel="noopener">Visit Restore Forward</a>
       </div>
     </div>
   </div>
@@ -838,12 +784,12 @@ footer .fcredit{max-width:none; font-size:1.125rem}
     <div>
       <p class="flabel">Menu</p>
       <ul class="fmenu">
-        <li><a href="#why">Why I offer this</a></li>
-        <li><a href="#what">What we&rsquo;ll do</a></li>
-        <li><a href="#who">Who this is for</a></li>
-        <li><a href="#book">Booking</a></li>
-        <li><a href="#letter">A love letter</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#why">Why I offer this</a></li>
+        <li><a href="index.html#what">What we&rsquo;ll do</a></li>
+        <li><a href="index.html#who">Who this is for</a></li>
+        <li><a href="index.html#book">Booking</a></li>
+        <li><a href="index.html#letter">A love letter</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
       </ul>
     </div>
     <div>
@@ -854,16 +800,13 @@ footer .fcredit{max-width:none; font-size:1.125rem}
     <div>
       <p class="flabel">Book</p>
       <ul class="fmenu">
-        <li><a href="https://calendly.com/farah-tanis/30min?background_color=fffbf0&text_color=59637e&primary_color=0c1a2e" onclick="return openCal('https://calendly.com/farah-tanis/30min?background_color=fffbf0&text_color=59637e&primary_color=0c1a2e')">Book 30 minutes &mdash; $45</a></li>
-        <li><a href="https://calendly.com/farah-tanis/60min?background_color=fffbf0&text_color=59637e&primary_color=0c1a2e" onclick="return openCal('https://calendly.com/farah-tanis/60min?background_color=fffbf0&text_color=59637e&primary_color=0c1a2e')">Book one hour &mdash; $80</a></li>
+        <li><a href="https://calendly.com/farah-tanis/30min?background_color=fffbf0&text_color=59637e&primary_color=0c1a2e">Book 30 minutes &mdash; $45</a></li>
+        <li><a href="https://calendly.com/farah-tanis/60min?background_color=fffbf0&text_color=59637e&primary_color=0c1a2e">Book one hour &mdash; $80</a></li>
       </ul>
     </div>
   </div>
   <div class="fbase">
     <p class="fcredit">Website created by <a href="https://lumezia.com" target="_blank" rel="noopener">lumezia.com</a></p>
-    <!-- Social links, all Farah's own: Instagram, X and LinkedIn confirmed by their
-         bios (Restore Forward, Black Women's Blueprint), Facebook chosen by the team.
-         No YouTube: she has no channel of her own. -->
     <ul class="social">
       <li><a class="social-link" href="https://www.facebook.com/farah.tanis/" target="_blank" rel="noopener" aria-label="Farah Tanis on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M13.6 21v-7.6h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.1H7.9v3h2.6V21z"/></svg></a></li>
       <li><a class="social-link" href="https://www.instagram.com/iamfarahtanis/" target="_blank" rel="noopener" aria-label="Farah Tanis on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.8"/><circle cx="12" cy="12" r="3.9"/><circle class="fill" cx="17.1" cy="6.9" r="1.1"/></svg></a></li>
@@ -873,19 +816,6 @@ footer .fcredit{max-width:none; font-size:1.125rem}
   </div>
 </footer>
 
-<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<script>
-  // Open in the Calendly overlay when the widget has loaded; otherwise let the
-  // link navigate normally, so booking still works with JS blocked or slow.
-  function openCal(url){
-    if (window.Calendly && Calendly.initPopupWidget){
-      Calendly.initPopupWidget({url:url});
-      return false;
-    }
-    return true;
-  }
-</script>
 <script>
   /* Small screens: the menu button opens the full-screen menu, and closes it. */
   (function(){
@@ -904,25 +834,7 @@ footer .fcredit{max-width:none; font-size:1.125rem}
   })();
 </script>
 <script>
-  /* The section in view is underlined in the menu. */
-  (function(){
-    if(!('IntersectionObserver' in window)) return;
-    var links = [].slice.call(document.querySelectorAll('.topnav li a[href^="#"]')), byId = {};
-    links.forEach(function(a){ var el = document.querySelector(a.getAttribute('href')); if(el) byId[el.id] = a; });
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){
-        if(!en.isIntersecting) return;
-        links.forEach(function(a){ a.removeAttribute('aria-current'); });
-        byId[en.target.id].setAttribute('aria-current', 'true');
-      });
-    }, {rootMargin:'-40% 0px -55% 0px'});
-    Object.keys(byId).forEach(function(id){ io.observe(document.getElementById(id)); });
-  })();
-</script>
-<script>
-  /* The menu bar: hidden while reading down, back on any scroll up. It is pinned only
-     once the top band has gone, and given its motion a frame later, so it never
-     slides across the page on the way in. With the menu open it stays put. */
+  /* The menu bar: hidden while reading down, back on any scroll up. */
   (function(){
     var header = document.querySelector('.site-top'), bar = header && header.querySelector('.topbar');
     if(!bar || !window.requestAnimationFrame) return;
@@ -933,7 +845,7 @@ footer .fcredit{max-width:none; font-size:1.125rem}
       lastY = y;
       if(y <= 0){ header.classList.remove('is-pinned', 'is-shown', 'can-move'); travel = 0; return; }
       if(!header.classList.contains('is-pinned')){
-        if(y <= h) return;                       /* still in its place on the page */
+        if(y <= h) return;
         header.classList.add('is-pinned');
         void bar.offsetHeight;
         header.classList.add('can-move');
@@ -962,9 +874,7 @@ footer .fcredit{max-width:none; font-size:1.125rem}
   })();
 </script>
 <script>
-  /* Parallax: tells each .px photograph where it is in the window, as --px from 1
-     (just entering at the bottom) to -1 (just leaving at the top). One read per
-     frame, only while scrolling, and nothing at all for reduced motion. */
+  /* Parallax on the photograph of the roots. */
   (function(){
     var els = [].slice.call(document.querySelectorAll('.px'));
     if(!els.length || !window.requestAnimationFrame) return;
@@ -987,8 +897,7 @@ footer .fcredit{max-width:none; font-size:1.125rem}
   })();
 </script>
 <script>
-  /* Reveal on entry, once per section. Every failure path ends with the content
-     visible: no observer, or anything thrown, and .anim comes straight back off. */
+  /* Reveal on entry, once per section; every failure path leaves the content visible. */
   (function(){
     var root = document.documentElement;
     if(!root.classList.contains('anim')) return;
@@ -1000,25 +909,17 @@ footer .fcredit{max-width:none; font-size:1.125rem}
           if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
         });
       }, {rootMargin:'0px 0px -10% 0px', threshold:0.08});
-      document.querySelectorAll('.rv, .arc > li').forEach(function(el){ io.observe(el); });
-      /* Last resort: if anything has still not been revealed, stop hiding it. */
+      document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
       setTimeout(function(){
-        document.querySelectorAll('.rv:not(.in), .arc > li:not(.in)').forEach(function(el){
+        document.querySelectorAll('.rv:not(.in)').forEach(function(el){
           if(el.getBoundingClientRect().top < window.innerHeight) el.classList.add('in');
         });
       }, 2500);
     }catch(e){ showAll(); }
   })();
 </script>
-<!-- Cloudflare Web Analytics. Cookieless, so no consent banner, and nothing about
-     who is reading a page on illness and trauma leaves for an ad network. Loads only
-     on the real domain, so localhost and previews never count. Deliberately absent
-     from the draft pages, so reviewing a draft never counts either.
-
-     Personal opt-out: visit farahtanis.com/?analytics=off once on a device and that
-     browser stops being counted for good (?analytics=on turns it back on). Worth
-     doing on Farah's and the team's devices - on a site this size, the people who
-     built it would otherwise be a real share of the numbers. -->
+<!-- Cloudflare Web Analytics, as on the home page: cookieless, real domain only,
+     and ?analytics=off opts a browser out. -->
 <script>
   (function () {
     var CF_TOKEN = "aee36a1283884037ad015bedb9a8c114";
