@@ -504,6 +504,16 @@ footer .fcredit{max-width:none; font-size:1.125rem}
   .fgrid{grid-template-columns:minmax(0,1fr)}
 }
 
+@media (min-width:641px) and (max-width:900px){
+  /* Tablets: the sunflowers float left, as on desktop, and the story wraps around
+     them - its first paragraphs beside the photo, the rest running full width below. */
+  #why .grid3{display:flow-root}
+  #why .grid3 > :first-child{float:left; width:min(40%,16rem); padding:var(--after-rule) var(--gutter) 1rem var(--gutter)}
+  #why .story-photo{width:100%}
+  #why .grid3 > .prose{padding-top:var(--after-rule)}
+  #why .prose .pull{clear:left}   /* the pull quote never splits across the photo's edge */
+}
+
 @media (prefers-reduced-motion: no-preference) and (max-width:900px){
   /* The screen fades in, then the sections rise one after another and the foot last;
      closing is a single quiet fade. */
