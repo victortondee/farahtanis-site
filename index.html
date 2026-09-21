@@ -501,15 +501,6 @@ footer .fcredit{max-width:none; font-size:1.125rem}
   .span2{grid-column:auto}
   .facts{columns:1}
   .arc{display:block}
-  /* Stacked: title, portrait, italic line, lede and buttons. */
-  .hero-grid{grid-template-columns:minmax(0,1fr)}
-  .hero .title, .hero .sub, .hero .lede, .hero .cta-row, .hero-photo{grid-column:auto; grid-row:auto}
-  .hero .title{order:1}
-  .hero-photo{order:2; margin:1.8rem 0 0}
-  .hero .sub{order:3; margin-top:1.6rem}
-  .hero .lede{order:4}
-  .hero .cta-row{order:5}
-  .hero-photo img{width:min(70%,17rem)}
   .fgrid{grid-template-columns:minmax(0,1fr)}
 }
 
@@ -586,6 +577,15 @@ footer .fcredit{max-width:none; font-size:1.125rem}
   .badge.is-compact{right:0.55rem}
   .site-top.is-pinned.is-shown + .badge.is-compact{top:calc(var(--top-band) + 0.55rem); right:0.55rem; width:5.4rem; font-size:0.9rem}
 
+  /* Phones only stack the hero - tablets keep the portrait beside the title. Stacked: title, portrait, italic line, lede and buttons. */
+  .hero-grid{grid-template-columns:minmax(0,1fr)}
+  .hero .title, .hero .sub, .hero .lede, .hero .cta-row, .hero-photo{grid-column:auto; grid-row:auto}
+  .hero .title{order:1}
+  .hero-photo{order:2; margin:1.8rem 0 0}
+  .hero .sub{order:3; margin-top:1.6rem}
+  .hero .lede{order:4}
+  .hero .cta-row{order:5}
+  .hero-photo img{width:min(70%,17rem)}
   /* Start the headline below the badge so the two never collide. */
   .hero .title{padding-top:min(4.2vw,16.4px)}   /* the page title sits close under the bar, ~20px to its capitals on the 320 canvas, as on restoreny.org */
   .brand-sub{display:none}
