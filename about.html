@@ -800,7 +800,7 @@ footer .fcredit{max-width:none; font-size:1.125rem}
     <div>
       <p class="flabel">Book</p>
       <ul class="fmenu">
-        <li><a href="https://calendly.com/farah-tanis/30min?background_color=fffbf0&text_color=59637e&primary_color=0c1a2e">Book 30 minutes &mdash; $45</a></li>
+        <li><a href="https://cal.com/farahtanis/30min" data-cal-link="farahtanis/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Book 30 minutes &mdash; $45</a></li>
         <li><a href="https://calendly.com/farah-tanis/60min?background_color=fffbf0&text_color=59637e&primary_color=0c1a2e">Book one hour &mdash; $80</a></li>
       </ul>
     </div>
@@ -935,6 +935,24 @@ footer .fcredit{max-width:none; font-size:1.125rem}
     b.setAttribute("data-cf-beacon", JSON.stringify({ token: CF_TOKEN }));
     document.head.appendChild(b);
   })();
+</script>
+<!-- Cal.com carries the 30-minute consultation: Calendly's plan allows only one event type.
+     The link still works on its own if the embed script is blocked or slow. -->
+<script>
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "30min", {origin:"https://app.cal.com"});
+  Cal.config = Cal.config || {};
+  Cal.config.forwardQueryParams = true;
+  Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  /* Open the Cal overlay ourselves rather than relying on the embed's own click handler,
+     which lets the link navigate. If Cal has not loaded, the href takes over. */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('[data-cal-link]');
+    if(!a || e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
+    if(!(window.Cal && Cal.ns && Cal.ns["30min"])) return;
+    e.preventDefault();
+    Cal.ns["30min"]("modal", {calLink: a.getAttribute('data-cal-link'), config: {layout: "month_view"}});
+  });
 </script>
 </body>
 </html>
