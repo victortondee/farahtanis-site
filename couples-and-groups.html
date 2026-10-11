@@ -638,15 +638,14 @@ footer .fcredit{max-width:none; font-size:1.125rem}
   .facts-list{grid-template-columns:minmax(0,1fr); row-gap:0.4rem}
   .facts-list dd{margin-bottom:1rem}
 }
-/* ---------- review draft: the banner and the marks on what is still to be confirmed ---------- */
+/* ---------- review draft banner ---------- */
 .review-banner{position:relative; z-index:60; padding:.75rem var(--gutter); background:var(--peach); color:var(--navy);
   font:400 var(--t-small)/1.4 var(--ff-label); letter-spacing:.02em; text-align:center}
 .review-banner strong{font-weight:500}
-.tbd{margin-left:.15em; color:var(--peach); font:500 .8em/1 var(--ff-label)}
 </style>
 </head>
 <body>
-<div class="review-banner" role="note"><strong>Draft for Farah&rsquo;s review:</strong> details marked * still need confirming. This page is not public yet.</div>
+<div class="review-banner" role="note"><strong>Draft for Farah&rsquo;s review:</strong> the wording still needs her approval. This page is not public yet.</div>
 
 <header class="site-top">
   <div class="topbar">
@@ -673,10 +672,8 @@ footer .fcredit{max-width:none; font-size:1.125rem}
 </header>
 <a class="badge" id="badge" href="#inquire">Ask about<br>Support</a>
 
-<!-- DRAFT. The copy is Farah's, from the brief she sent on 2026-10-05. Everything marked
-     CONFIRM is a service detail she still has to settle - format, fees, eligible telehealth
-     locations, availability and where an enquiry should go. The page invites people to ask;
-     it does not open enrolment. -->
+<!-- DRAFT. Copy from Farah's brief of 2026-10-05, details from her answers on 2026-10-09.
+     Awaiting her review of the wording. -->
 
 <section class="rv band hero" id="top">
   <div class="hero-grid">
@@ -730,29 +727,28 @@ footer .fcredit{max-width:none; font-size:1.125rem}
   <h2 class="title">Format, fees and availability</h2>
   <p class="heading">Settled with you before anything begins</p>
   <hr class="rule">
-  <!-- PROPOSED. Each line is a suggestion for Farah to confirm or correct, not a fact she has
-       given: fees are scaled from her $45 / $80 consultations, the state follows her New York
-       practice. Nothing here is published until she has been through it. -->
+  <!-- Farah's answers, 9 Oct 2026: in person in New York and New Jersey or virtual from
+       anywhere (no telehealth therapy); a first consultation at the individual rates; ongoing
+       fees on a sliding scale, set at that consultation; groups need a screening. No licence line. -->
   <dl class="facts-list">
-    <dt>Sessions</dt><dd>By telehealth<sup class="tbd">*</sup></dd>
-    <dt>Telehealth</dt><dd>New York State<sup class="tbd">*</sup></dd>
-    <dt>Couples</dt><dd>60 minutes, $120<sup class="tbd">*</sup></dd>
-    <dt>Groups</dt><dd>90 minutes, $40 a person<sup class="tbd">*</sup></dd>
-    <dt>Group schedule</dt><dd>Six meetings, once a fortnight<sup class="tbd">*</sup></dd>
-    <dt>Insurance</dt><dd>Not billed; a sliding scale on request<sup class="tbd">*</sup></dd>
+    <dt>Where</dt><dd>In person in New York and New Jersey, or virtually from anywhere</dd>
+    <dt>First consultation</dt><dd>$45 for 30 minutes or $80 for an hour &mdash; the same for couples and for groups of any size</dd>
+    <dt>After that</dt><dd>Fees and payment are discussed at the first consultation, on a sliding scale by income</dd>
+    <dt>Groups</dt><dd>Joining a group begins with a short screening</dd>
     <dt>Availability</dt><dd>Ask about upcoming openings</dd>
   </dl>
 </section>
 
 <section class="rv band" id="inquire">
-  <h2 class="title">Inquire before enrolling</h2>
+  <h2 class="title">Begin with a consultation</h2>
   <hr class="rule">
   <div class="grid3">
     <div class="span2 prose">
-      <p class="lede">If you&rsquo;re wondering whether couples therapy or a group may be right for you, reach out first. We&rsquo;ll share current availability, fees, format and eligibility, and talk through whether the service fits what you&rsquo;re looking for.</p>
-      <p>Please say how you prefer to be contacted, whether you are asking about couples therapy or group support, and a little about what brings you here. Please don&rsquo;t include urgent or highly sensitive details in your first message.</p>
+      <p class="lede">If you&rsquo;re wondering whether couples therapy or a group may be right for you, begin with a first consultation &mdash; the same as an individual one. We&rsquo;ll talk through availability, fees, format and eligibility, and whether the service fits what you&rsquo;re looking for.</p>
+      <p>When you book, add a note saying whether you are asking about couples therapy or group support, and a little about what brings you here. Please don&rsquo;t include urgent or highly sensitive details.</p>
       <div class="cta-row">
-        <a class="btn btn-primary btn-lg" href="https://cal.com/farahtanis/couples-inquiry" data-cal-link="farahtanis/couples-inquiry" data-cal-namespace="couples-inquiry" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Book a free 15-minute call</a>
+        <a class="btn btn-primary btn-lg" href="https://cal.com/farahtanis/30min" data-cal-link="farahtanis/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Book 30 minutes &mdash; $45</a>
+        <a class="btn btn-primary btn-lg" href="https://cal.com/farahtanis/60min" data-cal-link="farahtanis/60min" data-cal-namespace="60min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Book one hour &mdash; $80</a>
         <a class="btn btn-ghost btn-lg" href="mailto:ftanis@restoreny.org?subject=Couples%20or%20group%20support">Write instead</a>
       </div>
     </div>
@@ -941,8 +937,6 @@ footer .fcredit{max-width:none; font-size:1.125rem}
   Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
   Cal("init", "60min", {origin:"https://app.cal.com"});
   Cal.ns["60min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-  Cal("init", "couples-inquiry", {origin:"https://app.cal.com"});
-  Cal.ns["couples-inquiry"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
   /* Open the Cal overlay ourselves, first (capture phase), rather than relying on the embed's own
      click handler, which lets the link navigate. If Cal has not loaded, the href takes over. */
   document.addEventListener('click', function(e){
