@@ -629,6 +629,11 @@ footer .fcredit{max-width:none; font-size:1.125rem}
 .facts-list dd{margin:0; font-size:var(--t-serif); font-family:var(--ff-display); font-weight:300}
 .tbc{font:400 var(--t-small)/1.4 var(--ff-body); color:var(--blue-gray); font-style:italic}
 .band-slate .tbc, .band-blue .tbc{color:inherit; opacity:.75}
+/* The closing band starts with its pull quote. Without padding of its own, the quote's top
+   margin collapses through the section and pushes the slate band down, leaving a strip of cream
+   under the section above - where its column divider then stops short. */
+.closing{padding-top:var(--band-end)}
+.closing .pull{margin-top:0}
 /* The book line, under her name. */
 .booknote{margin-top:1rem; font-size:var(--t-small); opacity:.85}
 @media (max-width:900px){
