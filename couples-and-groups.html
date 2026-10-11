@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Couples &amp; Group Support — Farah Tanis</title>
+<meta name="description" content="Couples therapy and group support with Farah Tanis, for partners, families and caregivers navigating illness, caregiving, grief or loss. Inquire about format, fees and availability.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://farahtanis.com/couples-and-groups.html">
+<meta property="og:title" content="Couples &amp; Group Support — Farah Tanis">
+<meta property="og:description" content="For partners, families and caregivers navigating illness, caregiving, grief or loss. Inquire about format, fees and availability.">
+<meta property="og:image" content="https://farahtanis.com/images/farah-og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#59637E">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<script>
+  /* Runs before first paint so the reveal pre-state never flashes; nothing for
+     readers who have asked for reduced motion. */
+  try{
+    if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      document.documentElement.classList.add('anim');
+    }
+  }catch(e){}
+</script>
+<link rel="preload" href="fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/wix-madefor-display.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Farah Tanis",
+  "url": "https://farahtanis.com/about.html",
+  "image": "https://farahtanis.com/images/farah-og.jpg",
+  "jobTitle": "Founder, Restore Forward",
+  "worksFor": {"@type": "Organization", "name": "Restore Forward", "url": "https://restoreny.org"},
+  "sameAs": [
+    "https://www.instagram.com/iamfarahtanis/",
+    "https://www.linkedin.com/in/farah-tanis/",
+    "https://x.com/FarahTanis1",
+    "https://www.facebook.com/farah.tanis/"
+  ]
+}
+</script>
+<!-- This page carries a copy of the site's CSS from index.html, between the markers
+     below. After changing the CSS there, run:
+       python3 project/tools/refresh-site-css.py -->
+<style>
+/* site-css:start */
+/* Fonts are served from this site: Google Fonts would see every visitor's address,
+   which sits badly on a page about illness. Latin subsets, swapped in as they load. */
+/* fonts:start */
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300;font-display:swap;src:url(fonts/cormorant-garamond-italic.woff2) format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 400;font-display:swap;src:url(fonts/cormorant-garamond.woff2) format('woff2')}
+@font-face{font-family:'Wix Madefor Display';font-style:normal;font-weight:400 500;font-display:swap;src:url(fonts/wix-madefor-display.woff2) format('woff2')}
+@font-face{font-family:'Nunito Sans';font-style:normal;font-weight:300 500;font-display:swap;src:url(fonts/nunito-sans.woff2) format('woff2')}
+/* fonts:end */
+/* Restore Forward's look (restoreny.org), so this page and the non-profit it
+   supports read as one family. Colours are sampled from that site's own pixels.
+   Its sizes are drawn on a 1280px-wide canvas and scale with the window, so the
+   display sizes here do the same; running text stays put for readability. */
+:root{
+  --cream:#FFFBF0; --slate:#59637E; --blue-gray:#7C859E; --navy:#0C1A2E; --peach:#FFC58E;
+  /* Text, hairlines and focus rings take the ink of whatever band they sit on. */
+  --ink:var(--slate); --line:var(--slate); --focus:var(--navy);
+  --ff-display:'Cormorant Garamond',Georgia,serif;
+  /* Avenir is Restore Forward's body face. It is a paid font: Apple devices have it
+     built in, and everyone else gets Nunito Sans, its closest free match. */
+  --ff-body:'Avenir','Nunito Sans',system-ui,-apple-system,sans-serif;
+  --ff-label:'Wix Madefor Display','Nunito Sans',system-ui,sans-serif;
+  /* Restore Forward's text styles at 1280px: H1 143, H2 110, H3 43, H5 24, H6 22. */
+  --t-h1:clamp(2.6rem,11.2vw,8.94rem);
+  --t-h2:clamp(2.1rem,8.6vw,8.6rem);
+  --t-h3:clamp(1.75rem,3.36vw,2.7rem);
+  --t-quote:clamp(1.9rem,3.9vw,3.2rem);
+  --t-stat:clamp(2.5rem,7.2vw,5.75rem);   /* stays well under the title on phones */
+  --t-h5:clamp(1.25rem,1.875vw,1.6rem);
+  --t-h6:clamp(1rem,1.72vw,1.375rem);
+  /* Below body (18px) there are two steps only: small text and small capitals. */
+  --t-small:0.9375rem;  /* 15px */
+  --t-caps:0.8125rem;   /* 13px */
+  --gutter:clamp(1.1rem,1.6vw,1.6rem);
+  --band-end:clamp(2.75rem,5.5vw,4.4rem);
+  --top-band:clamp(5.75rem,10.6vw,8.5rem);
+  --bar:clamp(3.4rem,5.5vw,4.4rem);           /* the menu bar inside the top band */
+  --title-top:clamp(1.25rem,2vw,1.6rem);
+  --rule-gap:clamp(1rem,2.2vw,1.75rem);
+  --col-pad:clamp(1.5rem,2.5vw,2rem);       /* space either side of a column rule */
+  --after-rule:clamp(1.6rem,2.3vw,1.85rem); /* rule to the first line under it */
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box}
+:focus-visible{outline:2px solid var(--focus); outline-offset:3px}
+body{
+  margin:0; background:var(--cream); color:var(--ink);
+  font:300 1.125rem/1.3 var(--ff-body);
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,p,ul,dl,dd,figure{margin:0}
+a{color:inherit}
+/* Restore Forward sets nothing in bold; emphasis is one step heavier, no more. */
+strong{font-weight:500}
+
+/* ---------- bands ----------------------------------------------------------
+   Full-bleed and left-aligned on a narrow gutter, the way Restore Forward is.
+   Cream, slate and blue-gray bands alternate, so no two neighbours share a colour
+   and no line is needed to tell them apart. A hairline has two jobs only: the
+   full-width rule under the page title, and the vertical rule between columns.
+   Everything else is separated by space. Paragraph text never sits on the lighter
+   blue-gray; only large type does, which reads fine there. */
+.band{padding:0 var(--gutter) var(--band-end); color:var(--ink)}
+.band-slate{background:var(--slate); --ink:var(--cream); --line:var(--cream); --focus:var(--cream)}
+.band-blue{background:var(--blue-gray); --ink:var(--cream); --line:var(--cream); --focus:var(--cream)}
+
+/* Two big moments only: the page title and the letter's. Everything else is a
+   quiet heading, as on Restore Forward's inner pages. */
+.title{
+  padding-top:var(--title-top);
+  font:300 var(--t-h2)/0.85 var(--ff-display);
+  text-transform:uppercase; text-wrap:balance;
+}
+.title-h1{font-size:var(--t-h1); line-height:1}
+.title-mixed{text-transform:none; line-height:0.95}
+.rule{height:1px; margin:var(--rule-gap) calc(-1 * var(--gutter)) 0; border:0; background:var(--line)}
+
+/* The grid is always the last thing in a band. It reaches down into the band's bottom
+   padding and the columns carry that padding themselves, so their rules run all the
+   way to the band's edge, as on Restore Forward. */
+.grid3{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); margin:0 calc(-1 * var(--gutter)) calc(-1 * var(--band-end))}
+.grid3 > *{padding:var(--after-rule) var(--col-pad) var(--band-end); border-left:1px solid var(--line)}
+.grid3 > :first-child{border-left:0; padding-left:var(--gutter)}
+.span2{grid-column:span 2}
+
+.heading{margin-top:1rem; font:300 var(--t-h3)/1.1 var(--ff-display); color:var(--blue-gray); text-wrap:balance}
+.title + .heading{margin-top:clamp(0.8rem,1.6vw,1.4rem)}   /* a subtitle under its title, as on Restore Forward */
+.heading + .rule{margin-top:calc(var(--rule-gap) - clamp(0.5rem,1.25vw,1rem))}
+.band-slate .heading, .band-blue .heading{color:inherit}
+
+.prose > * + *{margin-top:1.3em}   /* one blank line */
+.prose p{max-width:36em}
+.lede{font-size:1.25rem; line-height:1.3}
+.pull{margin-block:1.6rem; font:300 var(--t-quote)/1.12 var(--ff-display); text-wrap:balance}
+.prose .pull{max-width:17em}
+
+/* ---------- buttons: full pills, sentence case, Avenir Light ---------- */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-height:2.7rem; padding:0.55rem 1.5rem;
+  font:300 1.125rem/1.2 var(--ff-body); text-align:center; text-decoration:none;
+  border:1px solid transparent; border-radius:999px; cursor:pointer;
+  transition:background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease);
+}
+.btn-primary{background:var(--navy); color:var(--cream)}
+.btn-primary:hover{background:var(--slate)}
+.btn-ghost{background:transparent; color:var(--navy); border-color:var(--navy)}
+.btn-ghost:hover{background:var(--navy); color:var(--cream)}
+.band-slate .btn-primary{background:var(--cream); color:var(--slate); border-color:var(--cream)}
+.band-slate .btn-primary:hover{background:transparent; color:var(--cream)}
+.btn-lg{min-height:clamp(2.9rem,5.3vw,4.25rem); min-width:clamp(13rem,21.4vw,17rem)}
+.cta-row{display:flex; flex-wrap:wrap; gap:0.9rem; margin-top:1.8rem}
+
+/* ---------- top band ---------- */
+.site-top{
+  min-height:var(--top-band); padding:0 var(--gutter);
+  background:var(--slate); color:var(--cream); --focus:var(--cream);
+}
+.topbar{position:relative; display:flex; align-items:center; gap:1.5rem 2.5rem; min-height:var(--bar)}
+/* Once the page has scrolled past the top band, the menu bar steps out of the way on
+   the way down and comes back the moment a reader scrolls up. It keeps its place in
+   the band (the band's own height holds it), so nothing on the page moves. */
+.site-top.is-pinned .topbar{position:fixed; top:0; left:0; right:0; z-index:30; padding:0 var(--gutter); background:var(--slate); transform:translateY(-100%)}
+.site-top.is-pinned.is-shown .topbar{transform:none}
+/* With the bar back, the badge returns to its full size and hangs across the bar's
+   lower edge, the way it first hangs across the top band. */
+.site-top.is-pinned.is-shown + .badge.is-compact{top:calc(var(--bar) - clamp(6.2rem,11.9vw,9.5rem) * 0.375); width:clamp(6.2rem,11.9vw,9.5rem); font-size:clamp(1.05rem,1.875vw,1.5rem)}
+/* The lockup mirrors "Restore Forward | The Reconciliation Center". */
+/* A two-line lockup, like Restore Forward's: her name at body size, her role small
+   beneath it. As one compact block it reads as a name, and the menu beside it as a menu. */
+.brand{display:flex; flex-direction:column; align-items:flex-start; gap:0.3rem; font:500 1.125rem/1.05 var(--ff-label); text-decoration:none; white-space:nowrap}
+.brand-sub{font:400 var(--t-caps)/1.1 var(--ff-label); opacity:.85}
+/* The menu follows the lockup after a clear gap, on the same line as her name. */
+.topnav{margin-left:clamp(1rem,3vw,2.5rem)}
+.topbar{align-items:center}
+@media (min-width:901px) and (max-width:999px){ .brand-sub{display:none} .topbar .topnav ul{column-gap:0.85rem} }   /* on the narrowest laptops only her name and a tighter menu, so all six items stay clear of the badge */
+.topnav ul{display:flex; flex-wrap:wrap; gap:0.6rem clamp(1rem,1.6vw,1.6rem); margin:0; padding:0; list-style:none}
+.topnav a{font:300 var(--t-caps)/1 var(--ff-body); text-transform:uppercase; text-decoration:none}
+.topnav a:hover, .topnav a[aria-current="true"], .topnav a[aria-current="page"]{text-decoration:underline; text-underline-offset:0.3em}
+.menu-toggle, .menu-foot{display:none}
+
+/* Restore Forward's peach "Book a Consult" circle. It starts across the band's lower
+   edge, then shrinks into the corner and stays there as the page scrolls, so
+   booking is always one tap away. Peach is used for this and nothing else. */
+.badge{
+  position:fixed; z-index:35;   /* above the menu bar, which it hangs across */
+  top:clamp(2.6rem,6.2vw,4.95rem); right:var(--gutter);   /* shares the portrait's right edge */
+  display:grid; place-items:center;
+  width:clamp(6.2rem,11.9vw,9.5rem); aspect-ratio:1; border-radius:50%;
+  background:var(--peach); color:var(--slate); --focus:var(--navy);
+  font:300 clamp(1.05rem,1.875vw,1.5rem)/1.12 var(--ff-display);
+  text-align:center; text-decoration:none;
+}
+.badge.is-compact{top:0.55rem; width:5.4rem; font-size:0.9rem}
+.badge:hover{transform:scale(1.04)}
+
+/* ---------- hero: words on the left, the portrait large on the right, no rules ---------- */
+.hero-grid{display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); column-gap:clamp(1.5rem,3vw,2.5rem); align-items:start}
+.hero-text{display:contents}
+/* The title runs across both columns; the portrait starts level with its second line,
+   whose words end before the portrait's column begins. */
+.hero .title{grid-column:1 / -1; grid-row:1}
+.hero .sub{grid-column:1; margin-top:clamp(2rem,4vw,3.4rem); font:italic 300 var(--t-h5)/1.3 var(--ff-display)}
+.hero .lede{grid-column:1; margin-top:1.3rem; max-width:22em}
+.hero .cta-row{grid-column:1; margin-top:2.2rem}
+.hero-photo{grid-column:2; grid-row:1 / span 4; margin:calc(var(--title-top) + var(--t-h1)) 0 0}
+.hero-photo img{
+  display:block; width:100%; height:auto; aspect-ratio:0.8;
+  object-fit:cover; object-position:50% 50%;
+  border-radius:clamp(2rem,4.7vw,3.75rem) 0;   /* the reference's leaf crop */
+  filter:saturate(.82) sepia(.1);              /* settles the photo into the palette */
+}
+
+/* ---------- lists: plain bullets with relaxed spacing ---------- */
+.facts{columns:2; column-gap:calc(var(--gutter) * 2); margin:0; padding:0 0 0 1.1em; list-style:disc}
+.facts li{padding-left:0.25em; break-inside:avoid}
+.facts li + li{margin-top:0.9rem}
+
+/* A second photograph in the story's label column, in the reference's tall capsule. */
+/* The capsule is the frame: it clips, so the photo can move inside it. */
+.story-photo{margin:0; width:min(100%,17rem); overflow:hidden; border-radius:999px; transform:translateZ(0)}
+.story-photo img{
+  display:block; width:100%; height:auto; aspect-ratio:0.66; object-fit:cover;
+  filter:saturate(.9) sepia(.06);
+}
+
+/* "We will" as the arc of a session: seven numbered moments in large light
+   numerals, the way Restore Forward sets its stats, flowing in two columns. No
+   label column and no rules here, so the section reads as a path, not a list. */
+.arc{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:calc(var(--gutter) * 3); margin:clamp(1rem,1.6vw,1.25rem) 0 0; padding:0; list-style:none}
+/* 1-3 on the left, 4-7 on the right, on shared rows so the two columns stay level. */
+.arc li:nth-child(-n+3){grid-column:1}
+.arc li:nth-child(4){grid-column:2; grid-row:1}
+.arc li:nth-child(5){grid-column:2; grid-row:2}
+.arc li:nth-child(6){grid-column:2; grid-row:3}
+.arc li:nth-child(7){grid-column:2; grid-row:4}
+.arc li{
+  display:grid; grid-template-columns:auto minmax(0,1fr); column-gap:1.2rem; align-items:baseline;
+  break-inside:avoid; padding-bottom:clamp(1.4rem,2.6vw,2.2rem);
+}
+.arc-num{min-width:1.1em; font:300 clamp(2.5rem,5vw,4rem)/0.9 var(--ff-display); font-variant-numeric:lining-nums}   /* one height for every numeral, so every line of text starts level */
+.arc p{max-width:24em}
+.arc li:last-child{padding-bottom:0}   /* the band's own padding ends the section */
+
+/* "Who this is for": the six audiences as short serif statements in three ruled
+   columns, Restore Forward's service-column layout, under a full-width heading. */
+.heading-wide{max-width:22em}
+.who ul{margin:0; list-style:none}   /* padding comes from .grid3 > *, so the rules keep their gutters */
+.who li{font:300 clamp(1.4rem,2.2vw,1.75rem)/1.2 var(--ff-display); max-width:16em; text-wrap:pretty}
+.who li + li{margin-top:clamp(1.2rem,2.2vw,1.8rem)}
+
+/* A full-bleed photograph between sections, the reference's rhythm. The booking
+   badge follows the reader, so no button strip is needed here. */
+.photo-band{position:relative; margin:0; overflow:hidden; line-height:0}
+/* A way to book, centred on the hands: an outline only, so the photo shows through.
+   It sits on the pale sky between the hands, so the outline is the hero's navy. */
+.photo-cta{position:absolute; inset:0; display:grid; place-items:center; padding:var(--gutter); line-height:normal}
+.photo-cta .btn{background:transparent; color:var(--navy); border-color:var(--navy)}
+.photo-cta .btn:hover{background:var(--navy); color:var(--cream)}
+.photo-band img{display:block; width:100%; height:clamp(16rem,36vw,30rem); object-fit:cover; object-position:50% 40%; filter:saturate(.85)}
+
+/* ---------- what you will leave with: large type only, on blue-gray ---------- */
+.rule + .leave{padding-top:var(--after-rule)}
+.leave .pull{margin:0; max-width:16em}
+.leave .lede{margin-top:2rem; max-width:30em}
+.leave .lede + p{margin-top:1.3em; max-width:36em}
+
+/* ---------- booking: each option is a clock that says what it is ----------
+   The peach band is the time you book, from twelve round the face: half an hour
+   fills half of it, an hour all of it, and the pointer rides its leading edge.
+   Inside, the words; below, the price in serif. Colours are the page's own: slate
+   ink, peach for booking, the hero's navy pill. */
+.dials{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:calc(var(--gutter) * 2); row-gap:2.5rem; --clock:clamp(10rem,15.6vw,12.5rem)}
+.dial{display:grid; justify-items:start; align-content:start; color:inherit; text-decoration:none; cursor:pointer}
+.clock{position:relative; display:block; width:var(--clock); aspect-ratio:1}
+.clock svg{position:absolute; inset:0; width:100%; height:100%; overflow:visible}
+.clock-rim, .clock-ticks line{fill:none; stroke:var(--ink); stroke-width:1; vector-effect:non-scaling-stroke; transition:stroke .3s var(--ease)}
+.clock-sweep{
+  fill:none; stroke:var(--peach); stroke-width:11;      /* the band, from r 31 to 42, clear of the words */
+  stroke-dasharray:var(--arc) 100;                       /* --arc 50 = half the face, 100 = all of it */
+  transform:rotate(-90deg); transform-origin:50% 50%;    /* from twelve, clockwise */
+}
+.clock-hand{stroke:var(--ink); stroke-width:1.5; stroke-linecap:round; vector-effect:non-scaling-stroke; transform:rotate(var(--deg)); transform-origin:50% 50%; transition:stroke .3s var(--ease)}
+.clock-text{position:absolute; inset:0; display:grid; place-content:center; row-gap:0.3em; text-align:center; font-size:calc(var(--clock) * 0.07)}
+.clock-text .num{font:300 calc(var(--clock) * 0.27)/0.85 var(--ff-display); font-variant-numeric:lining-nums}
+.clock-text .unit{font:400 max(0.8125rem,1em)/1 var(--ff-label); text-transform:uppercase}
+.dial .price{margin-top:1.3rem; font:300 var(--t-h3)/1 var(--ff-display); font-variant-numeric:lining-nums}
+.dial p{margin:0.9rem 0 0; font-size:var(--t-small); max-width:22em}
+.dial .btn{margin-top:1.4rem}
+.dial:hover .clock-rim, .dial:hover .clock-ticks line, .dial:hover .clock-hand{stroke:var(--navy)}
+.dial:hover .btn-primary{background:var(--slate)}
+
+.hours{margin-top:0}
+.hours dl{display:grid; grid-template-columns:auto 1fr; gap:0.45rem 1.5rem; align-items:baseline}
+.hours dt{font:400 var(--t-caps)/1.5 var(--ff-label); text-transform:uppercase}
+.hours dd{font:400 1.25rem/1.3 var(--ff-display); font-variant-numeric:oldstyle-nums}
+.muted{opacity:0.78}
+
+.note{max-width:44rem; margin-top:2.2rem; font-size:var(--t-small); line-height:1.4}
+.note + .note{margin-top:1rem}
+
+/* ---------- letter: its title on a full-bleed photograph, the words on slate ---------- */
+.band-photo{
+  position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; align-items:flex-start;
+  min-height:clamp(20rem,44vw,35rem); padding-bottom:var(--band-end);
+  background:var(--slate); color:var(--cream); --ink:var(--cream); --focus:var(--cream);
+}
+.band-photo picture, .band-photo img{position:absolute; inset:0; width:100%; height:100%}
+.band-photo img{object-fit:cover; object-position:50% 40%}
+.band-photo::after{content:""; position:absolute; inset:0; background:linear-gradient(to top, rgb(89 99 126 / .9), rgb(89 99 126 / .55) 45%, rgb(89 99 126 / 0) 80%)}
+.band-photo .title, .band-photo .heading{position:relative; z-index:1}
+.band-photo .heading{color:inherit}
+.band-photo .title{padding-top:clamp(6rem,12vw,9rem)}
+/* Her portrait, large, in the letter's label column; her name signs the letter. */
+.letter-portrait{margin:0; width:80%}
+.letter-portrait img{display:block; width:100%; height:auto; aspect-ratio:1; border-radius:50%; object-fit:cover; filter:saturate(.85) sepia(.08)}
+.signoff{margin-top:2.4rem}
+.signoff-name{font:italic 300 1.5rem/1.15 var(--ff-display)}
+.signoff-name span{display:block; margin-top:0.45rem; font:400 var(--t-caps)/1.3 var(--ff-label); letter-spacing:0.04em; text-transform:uppercase}
+.letter .prose p{font:400 1.25rem/1.2 var(--ff-display); max-width:32em}
+.letter .close{margin-top:1.6rem}
+
+/* ---------- footer: three columns, as on Restore Forward ---------- */
+footer{
+  padding:clamp(2.25rem,3.75vw,3rem) var(--gutter);
+  background:var(--slate); color:var(--cream); --focus:var(--cream);
+  border-top:1px solid var(--cream);   /* the letter above is slate too; this is the one line between them */
+}
+.fgrid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:2rem var(--gutter)}
+.flabel{margin-bottom:2.7rem; font:400 var(--t-h6)/1.2 var(--ff-label); text-transform:uppercase}
+.fmenu{display:grid; gap:0.7rem; margin:0; padding:0; list-style:none}
+.fmenu a{font:300 var(--t-caps)/1.3 var(--ff-body); text-transform:uppercase; text-decoration:none}
+.fmenu a:hover, footer p a:hover{text-decoration:underline; text-underline-offset:0.25em}
+footer p{max-width:22em; font-size:var(--t-small)}
+footer p + p{margin-top:0.6rem}
+/* The maker's credit, under everything else: full ink, body size, the link underlined. */
+footer .fcredit{max-width:none; font-size:1.125rem}
+/* Credit on the left, the social icons on the right, as on Restore Forward: cream
+   circles with the band's slate in them, turning to outlines under the pointer. */
+.fbase{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1.5rem 2rem; margin-top:clamp(2.5rem,5vw,4rem)}
+.social{display:flex; gap:0.6rem; margin:0; padding:0; list-style:none}
+.social-link{display:grid; place-items:center; width:2.5rem; aspect-ratio:1; border:1px solid var(--cream); border-radius:50%; background:var(--cream); color:var(--slate); transition:background .3s var(--ease), color .3s var(--ease)}
+.social-link svg{width:1.3rem; height:1.3rem; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linejoin:round}
+.social-link svg .fill{fill:currentColor; stroke:none}
+.social-link[href]{cursor:pointer}
+.social-link[href]:hover{background:transparent; color:var(--cream)}
+.fcredit a{text-decoration:underline; text-underline-offset:0.25em}
+
+/* ---------- macro motion ----------------------------------------------------
+   Sections reveal as they enter the viewport: a short rise and fade, with their
+   parts staggered so a block assembles rather than snapping in, and the rule
+   under the title drawing itself across the page. Slow easing on purpose - this
+   page is read by people who are unwell, and quick or bouncy motion reads as
+   pressure.
+
+   Three ways it stays safe:
+     - the whole thing lives inside prefers-reduced-motion: no-preference
+     - .anim is set by an inline script in <head>, so the hidden pre-state is in
+       place before first paint and nothing flashes
+     - if that script never runs, or IntersectionObserver is missing, no rule
+       below matches and the page renders as plain static HTML
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: no-preference){
+  html{scroll-behavior:smooth}
+  .badge{transition:top .5s var(--ease), right .5s var(--ease), width .5s var(--ease), font-size .5s var(--ease), transform .35s var(--ease)}
+  .site-top.can-move .topbar{transition:transform .45s var(--ease)}
+
+  /* Parallax, on the photographs of the land only - the page's windows onto it:
+     the sunflower field, the hands, the roots the letter grows from. Each picture
+     drifts slower than the page, so it reads as further away than its frame and
+     the words beside it. Scaled up just enough that its edges never show. The
+     portraits stay still: a person is not a view. --px
+     runs from 1 (entering at the bottom) to -1 (leaving at the top), set by a
+     small script; without the script it stays 0 and the photo sits still. */
+  .px img{transform:translate3d(0, calc(var(--px, 0) * var(--px-range) * -1), 0) scale(var(--px-scale)); will-change:transform}
+  .story-photo.px{--px-range:14%; --px-scale:1.32}
+  .photo-band.px{--px-range:17%; --px-scale:1.38}
+  .band-photo.px{--px-range:19%; --px-scale:1.42}
+
+  .anim .rv > :not(.rule):not(.grid3):not(.arc):not(picture):not(.hero-grid),
+  .anim .hero-text > *,
+  .anim .rv .grid3 > :not(.stagger),
+  .anim .rv .facts > li, .anim .arc > li,
+  .anim .rv .dials > .dial{
+    opacity:0; transform:translateY(1.5rem);
+    transition:opacity .85s var(--ease), transform .85s var(--ease);
+  }
+  .anim .hero.rv .hero-photo{
+    opacity:0; transform:translateY(1.5rem) scale(.975);
+    transition:opacity 1.1s var(--ease), transform 1.1s var(--ease);
+  }
+  .anim .rv .rule{
+    transform:scaleX(0); transform-origin:left;
+    transition:transform 1.2s var(--ease) .1s;
+  }
+  .anim .rv.in > :not(.rule):not(.grid3):not(.arc):not(picture):not(.hero-grid),
+  .anim .rv.in .hero-text > *,
+  .anim .rv.in .grid3 > :not(.stagger),
+  .anim .rv.in .facts > li, .anim .arc > li.in,
+  .anim .rv.in .dials > .dial,
+  .anim .hero.rv.in .hero-photo,
+  .anim .rv.in .rule{ opacity:1; transform:none; }
+
+  /* Stagger. Explicit steps rather than a loop - CSS cannot multiply an nth index. */
+  .anim .rv .grid3 > :nth-child(2){transition-delay:.12s}
+  .anim .rv .grid3 > :nth-child(3){transition-delay:.24s}
+  .anim .hero.rv .hero-photo{transition-delay:.2s}
+  .anim .hero-text > :nth-child(2){transition-delay:.1s}
+  .anim .hero-text > :nth-child(3){transition-delay:.2s}
+  .anim .hero-text > :nth-child(4){transition-delay:.3s}
+  .anim .rv .facts > li:nth-child(1){transition-delay:.06s}
+  .anim .rv .facts > li:nth-child(2){transition-delay:.13s}
+  .anim .rv .facts > li:nth-child(3){transition-delay:.20s}
+  .anim .rv .facts > li:nth-child(4){transition-delay:.27s}
+  .anim .rv .facts > li:nth-child(5){transition-delay:.34s}
+  .anim .rv .facts > li:nth-child(6){transition-delay:.41s}
+  .anim .rv .facts > li:nth-child(n+7){transition-delay:.48s}
+
+  /* "We will": the seven moments arrive in the order a session walks them. Each
+     step reveals as it comes into view, and its numeral rises into place through
+     the numeral's own edge a beat after its line appears, like a step taken. On
+     a wide screen all seven are in view at once, so they follow one another. */
+  .anim .arc-num{clip-path:inset(-0.4em -0.4em 0 -0.4em)}   /* hides only what is below the numeral */
+  .anim .arc-num > span{display:inline-block; transform:translateY(105%); transition:transform 1s var(--ease) .18s}
+  .anim .arc > li.in .arc-num > span{transform:none}
+  @media (min-width:901px){
+    .anim .arc > li:nth-child(2){transition-delay:.16s} .anim .arc > li:nth-child(2) .arc-num > span{transition-delay:.34s}
+    .anim .arc > li:nth-child(3){transition-delay:.32s} .anim .arc > li:nth-child(3) .arc-num > span{transition-delay:.5s}
+    .anim .arc > li:nth-child(4){transition-delay:.48s} .anim .arc > li:nth-child(4) .arc-num > span{transition-delay:.66s}
+    .anim .arc > li:nth-child(5){transition-delay:.64s} .anim .arc > li:nth-child(5) .arc-num > span{transition-delay:.82s}
+    .anim .arc > li:nth-child(6){transition-delay:.8s}  .anim .arc > li:nth-child(6) .arc-num > span{transition-delay:.98s}
+    .anim .arc > li:nth-child(7){transition-delay:.96s} .anim .arc > li:nth-child(7) .arc-num > span{transition-delay:1.14s}
+  }
+  .anim .rv .dials > .dial:nth-child(2){transition-delay:.12s}
+
+  /* The pointer sweeps the band out, easing in and out, at one speed once under
+     way: 26ms a minute, so the hour takes twice as long as the half hour. */
+  .anim .rv .clock-sweep{stroke-dashoffset:var(--arc); transition:stroke-dashoffset calc(var(--arc) * 26ms) cubic-bezier(.65,0,.35,1) .6s}
+  .anim .rv .clock-hand{transform:rotate(0deg); transition:transform calc(var(--arc) * 26ms) cubic-bezier(.65,0,.35,1) .6s, stroke .3s var(--ease)}
+  .anim .rv.in .clock-sweep{stroke-dashoffset:0}
+  .anim .rv.in .clock-hand{transform:rotate(var(--deg))}
+}
+
+@media (max-width:900px){
+  .menu-toggle{
+    display:grid; place-items:center; width:2.5rem; height:2.5rem; margin-left:auto; padding:0;
+    border:0; background:none; color:inherit; cursor:pointer;
+  }
+  .menu-toggle svg{width:1.5rem; height:0.95rem; overflow:visible; fill:none; stroke:currentColor; stroke-width:1.2}
+  .menu-toggle path{transform-box:fill-box; transform-origin:center}
+  .site-top.is-open .menu-toggle .l1{transform:translateY(6.5px) rotate(45deg)}
+  .site-top.is-open .menu-toggle .l2{opacity:0}
+  .site-top.is-open .menu-toggle .l3{transform:translateY(-6.5px) rotate(-45deg)}
+
+  /* The menu opens as a full screen of slate: the sections as large serif capitals,
+     numbered like the steps of a session, and a way to book at the foot. Her name and
+     the close button stay where they were, above it. */
+  .site-top.is-open .topbar{z-index:40}
+  .brand, .menu-toggle{position:relative; z-index:2}
+  .topnav{
+    position:fixed; inset:0; z-index:1; margin:0;
+    display:flex; flex-direction:column; gap:2.5rem;
+    padding:calc(var(--bar) + 2rem) var(--gutter) calc(clamp(1.5rem,7vw,2.5rem) + env(safe-area-inset-bottom));
+    background:var(--slate); color:var(--cream); --focus:var(--cream);
+    overflow-y:auto; overscroll-behavior:contain;
+    visibility:hidden; opacity:0;
+  }
+  .site-top.is-open .topnav{visibility:visible; opacity:1}
+  html.menu-open{overflow:hidden}   /* the page stays still behind the menu */
+  .site-top.is-open + .badge{display:none}
+  /* The list stays together, sitting just above the middle of the screen; the foot
+     keeps to the bottom. On a short screen the margins give way and it scrolls. */
+  .topnav ul{flex-direction:column; gap:clamp(1.65rem,6.75vw,2.85rem); margin-block:auto; padding-bottom:clamp(1.5rem,9vh,5rem); counter-reset:menu}
+  .topnav li{display:flex; align-items:baseline; gap:clamp(0.9rem,3vw,1.4rem); counter-increment:menu}
+  .topnav li::before{content:counter(menu, decimal-leading-zero); min-width:1.6em; font:400 var(--t-caps)/1 var(--ff-label); letter-spacing:0.08em; opacity:.6}
+  .topnav li a{display:block; font:300 clamp(1.6rem,8.2vw,3.6rem)/1.05 var(--ff-display); letter-spacing:0.01em; text-transform:uppercase}   /* one line each, even "Why I offer this" on a small phone */
+  .topnav li a:hover{text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:0.12em}
+  .topnav li a[aria-current="true"], .topnav li a[aria-current="page"]{text-decoration:none; font-style:italic}   /* where the reader is now */
+  .menu-foot{display:flex; flex-direction:column; align-items:flex-start; gap:1.2rem}
+  .menu-foot .btn{font:300 var(--t-body)/1.2 var(--ff-body); text-transform:none; text-decoration:none; background:var(--cream); color:var(--slate); border-color:var(--cream)}
+  .menu-foot .btn:hover{background:transparent; color:var(--cream)}
+  .menu-foot p{font:400 var(--t-caps)/1.3 var(--ff-label); letter-spacing:0.06em; text-transform:uppercase; opacity:.7}
+  .badge{top:3.6rem}
+  .site-top.is-pinned.is-shown + .badge.is-compact{top:calc(var(--bar) - 0.75rem)}   /* clear of the menu button */
+  .story-photo{width:min(60%,14rem)}
+  .letter-portrait{margin-top:0; width:min(60%,15rem)}
+  .grid3{grid-template-columns:minmax(0,1fr); margin-bottom:0}
+  .grid3 > *, .grid3 > :first-child{border-left:0; padding-inline:var(--gutter); padding-bottom:0}
+  .grid3 > * + *{padding-top:1rem}
+  .span2{grid-column:auto}
+  .facts{columns:1}
+  .arc{display:block}
+  .fgrid{grid-template-columns:minmax(0,1fr)}
+}
+
+@media (min-width:641px) and (max-width:900px){
+  /* Tablets: the sunflowers float left, as on desktop, and the story wraps around
+     them - its first paragraphs beside the photo, the rest running full width below. */
+  #why .grid3{display:flow-root}
+  #why .grid3 > :first-child{float:left; width:min(40%,16rem); padding:var(--after-rule) var(--gutter) 1rem var(--gutter)}
+  #why .story-photo{width:100%}
+  #why .grid3 > .prose{padding-top:var(--after-rule)}
+  #why .prose .pull{clear:left}   /* the pull quote never splits across the photo's edge */
+}
+
+@media (prefers-reduced-motion: no-preference) and (max-width:900px){
+  /* The screen fades in, then the sections rise one after another and the foot last;
+     closing is a single quiet fade. */
+  .topnav{transition:opacity .45s var(--ease), visibility 0s linear .45s}
+  .site-top.is-open .topnav{transition:opacity .45s var(--ease), visibility 0s}
+  .topnav li, .menu-foot{opacity:0; transform:translateY(1.25rem); transition:opacity .3s var(--ease), transform .3s var(--ease)}
+  .site-top.is-open .topnav li, .site-top.is-open .menu-foot{opacity:1; transform:none; transition:opacity .7s var(--ease), transform .9s var(--ease)}
+  .site-top.is-open .topnav li:nth-child(1){transition-delay:.12s}
+  .site-top.is-open .topnav li:nth-child(2){transition-delay:.18s}
+  .site-top.is-open .topnav li:nth-child(3){transition-delay:.24s}
+  .site-top.is-open .topnav li:nth-child(4){transition-delay:.30s}
+  .site-top.is-open .topnav li:nth-child(5){transition-delay:.36s}
+  .site-top.is-open .menu-foot{transition-delay:.46s}
+  .menu-toggle path{transition:transform .45s var(--ease), opacity .3s var(--ease)}
+}
+
+@media (max-width:640px){
+  /* Phones use Restore Forward's mobile type, measured on restoreny.org. Wix draws its
+     mobile pages on a 320px canvas, so sizes scale with the screen, up to their
+     values on a 390px phone. */
+  :root{
+    --t-h1:min(11vw,43px);        /* page title */
+    --t-h2:min(8.53vw,33px);      /* big mixed-case title */
+    --t-h3:min(6.67vw,26px);      /* section heading */
+    --t-h5:min(6.15vw,24px);      /* italic line, signature */
+    --t-h6:min(4.1vw,16px);       /* small capital labels */
+    --t-stat:min(7.69vw,30px);    /* numerals */
+    --t-quote:min(7.79vw,30.4px);
+    --t-lede:min(4.62vw,18px);
+    --t-body:min(4.1vw,16px);
+    --t-serif:min(5.13vw,20px);   /* the letter, the hours */
+    --t-small:min(3.59vw,14px);
+    --t-caps:min(3.33vw,13px);
+  }
+  :root{
+    /* Spacing scales with the screen exactly like the type, from the same 320px canvas,
+       so the proportions hold on every phone. Measured on restoreny.org's phone
+       "OUR MISSION" at 320: 48px above the title's capitals, 37 from them to the rule,
+       30 from the rule to the text, a 20px margin. */
+    --gutter:min(6.25vw,24.4px);
+    --top-band:min(11.8vw,46px);     /* a slim menu bar */
+    --title-top:min(14.2vw,55.4px);
+    --rule-gap:min(10.6vw,41.4px);
+    --after-rule:min(8.25vw,32.2px);
+    --band-end:min(13.75vw,53.6px);
+  }
+  :root{--bar:var(--top-band)}
+  .site-top{min-height:var(--top-band)}
+  .title + .heading{margin-top:1.75vw}
+  .heading + .rule{margin-top:2.5vw}   /* title and subtitle read as one block above the rule */
+  .arc{margin-top:min(6.75vw,26.3px)}
+  /* Two button sizes, as on restoreny.org's phone pages. */
+  .btn{min-height:min(11.1vw,43px); padding:0 min(7.2vw,28px)}
+  .btn-lg{min-height:min(17.5vw,68px); min-width:min(59vw,230px)}
+  body, .btn, footer .fcredit{font-size:var(--t-body)}
+  .brand{font-size:var(--t-serif)}   /* her name a step above body text on a phone: 20px at 390 */
+  .fbase{flex-direction:column-reverse; align-items:flex-start}   /* icons first, the credit last */
+  .social-link{width:min(11vw,43px)}
+  .lede{font-size:var(--t-lede)}
+  .letter .prose p, .hours dd{font-size:var(--t-serif)}
+  .signoff-name{font-size:var(--t-h5)}
+  .arc-num{font-size:var(--t-stat)}
+  .who li{font-size:min(5.74vw,22.4px)}
+  /* The badge hangs from the menu bar's lower edge, as on restoreny.org, clear of the menu icon. */
+  /* On a phone the badge starts just under the menu bar, tucked into the corner as
+     far from the right edge as from the bar, so the headline can start higher. */
+  .badge{top:calc(var(--top-band) + 0.55rem); right:0.55rem; width:min(26.4vw,103px); font-size:min(5.13vw,20px)}
+  /* Once scrolled, the badge stays small and tucked into the corner, as far from the
+     right edge as from the top - and when the bar comes back it keeps that size and
+     that edge, just stepping down below the bar. */
+  .badge.is-compact{right:0.55rem}
+  .site-top.is-pinned.is-shown + .badge.is-compact{top:calc(var(--top-band) + 0.55rem); right:0.55rem; width:5.4rem; font-size:0.9rem}
+
+  /* Phones only stack the hero - tablets keep the portrait beside the title. Stacked: title, portrait, italic line, lede and buttons. */
+  .hero-grid{grid-template-columns:minmax(0,1fr)}
+  .hero .title, .hero .sub, .hero .lede, .hero .cta-row, .hero-photo{grid-column:auto; grid-row:auto}
+  .hero .title{order:1}
+  .hero-photo{order:2; margin:1.8rem 0 0}
+  .hero .sub{order:3; margin-top:1.6rem}
+  .hero .lede{order:4}
+  .hero .cta-row{order:5}
+  .hero-photo img{width:min(70%,17rem)}
+  /* Start the headline below the badge so the two never collide. */
+  .hero .title{padding-top:min(4.2vw,16.4px)}   /* the page title sits close under the bar, ~20px to its capitals on the 320 canvas, as on restoreny.org */
+  .brand-sub{display:none}
+  .dials{grid-template-columns:minmax(0,1fr); row-gap:min(15vw,58px); --clock:min(46vw,180px)}
+  /* On a phone the band is taller, so the ring of hands is drawn larger and the sky
+     between them is wide enough for the button; the button is kept compact. */
+  .photo-band img{height:min(78.2vw,305px)}
+  .photo-cta .btn-lg{min-width:0; min-height:min(11.1vw,43px); padding:0 min(5vw,20px)}
+  /* Booking: tight inside each group, wide between the hours, each option and the notes. */
+  #book .grid3 > * + *{padding-top:min(15vw,58px)}
+  .dials + .note{margin-top:min(15vw,58px)}
+  /* Footer links far enough apart to read and tap, as on the reference. */
+  .flabel{margin-bottom:min(10vw,39px)}
+  .fmenu{gap:min(7vw,27.3px)}   /* ~40px from line to line on the 320 canvas, as on the reference */
+  .band-photo .heading{font-size:var(--t-serif)}   /* clearly under its title */
+  .hours dl{grid-template-columns:minmax(0,1fr); gap:0.2rem}
+  .hours dt{margin-top:min(5.6vw,22px)}
+  .hours dt:first-of-type{margin-top:0}
+  .cta-row{flex-direction:column; align-items:flex-start}
+}
+/* site-css:end */
+
+/* ---------- couples and groups: paired invitations, a details table, one way in ---------- */
+/* Two invitations side by side, each a serif name and its paragraphs. */
+.pair{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); margin:0 calc(-1 * var(--gutter)) calc(-1 * var(--band-end))}
+.pair > *{padding:var(--after-rule) var(--col-pad) var(--band-end); border-left:1px solid var(--line)}
+.pair > :first-child{border-left:0; padding-left:var(--gutter)}
+.pair h3{font:300 var(--t-h3)/1.1 var(--ff-display)}
+.pair p{margin-top:1.1rem; max-width:34em}
+/* The practical details, as a list of terms: what is still to be confirmed shows plainly. */
+.facts-list{margin:var(--after-rule) 0 0; display:grid; grid-template-columns:minmax(0,14rem) minmax(0,1fr); column-gap:clamp(1.5rem,3vw,2.5rem); row-gap:1.1rem}
+.facts-list dt{font:400 var(--t-caps)/1.3 var(--ff-label); letter-spacing:0.06em; text-transform:uppercase; align-self:baseline}
+.facts-list dd{margin:0; font-size:var(--t-serif); font-family:var(--ff-display); font-weight:300}
+.tbc{font:400 var(--t-small)/1.4 var(--ff-body); color:var(--blue-gray); font-style:italic}
+.band-slate .tbc, .band-blue .tbc{color:inherit; opacity:.75}
+/* The book line, under her name. */
+.booknote{margin-top:1rem; font-size:var(--t-small); opacity:.85}
+@media (max-width:900px){
+  .pair{grid-template-columns:minmax(0,1fr); margin-bottom:0}
+  .pair > *, .pair > :first-child{border-left:0; padding-inline:var(--gutter); padding-bottom:0}
+  .pair > * + *{padding-top:1.5rem}
+  .facts-list{grid-template-columns:minmax(0,1fr); row-gap:0.4rem}
+  .facts-list dd{margin-bottom:1rem}
+}
+/* ---------- review draft: the banner and the marks on what is still to be confirmed ---------- */
+.review-banner{position:relative; z-index:60; padding:.75rem var(--gutter); background:var(--peach); color:var(--navy);
+  font:400 var(--t-small)/1.4 var(--ff-label); letter-spacing:.02em; text-align:center}
+.review-banner strong{font-weight:500}
+.tbd{margin-left:.15em; color:var(--peach); font:500 .8em/1 var(--ff-label)}
+</style>
+</head>
+<body>
+<div class="review-banner" role="note"><strong>Draft for Farah&rsquo;s review:</strong> details marked * still need confirming. This page is not public yet.</div>
+
+<header class="site-top">
+  <div class="topbar">
+    <a class="brand" href="index.html"><span>Farah Tanis</span><span class="brand-sub">Author &middot; Founder, Restore Forward</span></a>
+    <nav class="topnav" id="topnav" aria-label="Site">
+      <ul>
+        <li><a href="index.html#why">Why I offer this</a></li>
+        <li><a href="index.html#what">What we&rsquo;ll do</a></li>
+        <li><a href="index.html#who">Who this is for</a></li>
+        <li><a href="index.html#book">Booking</a></li>
+        <li><a href="couples-and-groups.html" aria-current="page">Couples &amp; groups</a></li>
+        <li><a href="index.html#letter">A love letter</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="menu-foot">
+        <a class="btn btn-lg" href="index.html#book">Book a consultation</a>
+        <p>Farah Tanis &middot; Author &middot; Founder, Restore Forward</p>
+      </div>
+    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="topnav" aria-label="Menu">
+      <svg viewBox="0 0 24 15" aria-hidden="true"><path class="l1" d="M0 1h24"/><path class="l2" d="M0 7.5h24"/><path class="l3" d="M0 14h24"/></svg>
+    </button>
+  </div>
+</header>
+<a class="badge" id="badge" href="#inquire">Ask about<br>Support</a>
+
+<!-- DRAFT. The copy is Farah's, from the brief she sent on 2026-10-05. Everything marked
+     CONFIRM is a service detail she still has to settle - format, fees, eligible telehealth
+     locations, availability and where an enquiry should go. The page invites people to ask;
+     it does not open enrolment. -->
+
+<section class="rv band hero" id="top">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <h1 class="title title-h1">Couples<br>&amp; Groups</h1>
+      <p class="sub">When illness, caregiving, grief or loss touches your relationship</p>
+      <p class="lede">A serious illness or a major loss can change the way people speak, connect and care for one another. Partners and families may be trying to support each other while also managing fear, exhaustion, uncertainty or grief. You do not have to find the words alone.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="#inquire">Ask about support</a>
+        <a class="btn btn-ghost btn-lg" href="#offer">What is offered</a>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <!-- Photo: Brooke Cagle on Unsplash (p8jYIOx4zjk) - two people side by side, looking out together. -->
+      <picture>
+        <source srcset="images/together.webp" type="image/webp">
+        <img src="images/together.jpg" alt="Two people sitting side by side on a rock, looking out over the hills together" width="1000" height="1250" fetchpriority="high" decoding="async">
+      </picture>
+    </figure>
+  </div>
+</section>
+
+<section class="rv band band-slate" id="offer">
+  <h2 class="title">Two ways to be held</h2>
+  <p class="heading">Couples therapy and group support, for people carrying the same thing</p>
+  <hr class="rule">
+  <div class="pair">
+    <div>
+      <h3>Couples therapy</h3>
+      <p>Couples therapy offers partners a space to talk about the changes illness, caregiving, grief or loss has brought into their relationship. Sessions may help you understand each other&rsquo;s needs, navigate difficult conversations, and find ways to stay connected through a demanding time.</p>
+      <p>You do not need to be married or at a breaking point to reach out. You can inquire together to learn whether this support may be a fit.</p>
+    </div>
+    <div>
+      <h3>Group support</h3>
+      <p>Group therapy can bring together people facing some of the same questions: How do I care for someone I love without losing myself? How do we talk about what is happening? Where can I bring the feelings I&rsquo;m carrying?</p>
+      <p>Groups are organised around shared experiences and needs. Group enrolment details are provided after you inquire and a group is confirmed.</p>
+    </div>
+  </div>
+</section>
+
+<section class="rv band" id="who">
+  <h2 class="title">Who may inquire</h2>
+  <hr class="rule">
+  <div class="leave">
+    <p class="lede">Couples, partners, family members or caregivers navigating illness, caregiving, grief or loss may write to ask about fit.</p>
+    <p>Group eligibility, age range, and whether a group is currently forming are discussed before anyone enrols.</p>
+  </div>
+</section>
+
+<section class="rv band band-blue" id="details">
+  <h2 class="title">Format, fees and availability</h2>
+  <p class="heading">Settled with you before anything begins</p>
+  <hr class="rule">
+  <!-- PROPOSED. Each line is a suggestion for Farah to confirm or correct, not a fact she has
+       given: fees are scaled from her $45 / $80 consultations, the state follows her New York
+       practice. Nothing here is published until she has been through it. -->
+  <dl class="facts-list">
+    <dt>Sessions</dt><dd>By telehealth<sup class="tbd">*</sup></dd>
+    <dt>Telehealth</dt><dd>New York State<sup class="tbd">*</sup></dd>
+    <dt>Couples</dt><dd>60 minutes, $120<sup class="tbd">*</sup></dd>
+    <dt>Groups</dt><dd>90 minutes, $40 a person<sup class="tbd">*</sup></dd>
+    <dt>Group schedule</dt><dd>Six meetings, once a fortnight<sup class="tbd">*</sup></dd>
+    <dt>Insurance</dt><dd>Not billed; a sliding scale on request<sup class="tbd">*</sup></dd>
+    <dt>Availability</dt><dd>Ask about upcoming openings</dd>
+  </dl>
+</section>
+
+<section class="rv band" id="inquire">
+  <h2 class="title">Inquire before enrolling</h2>
+  <hr class="rule">
+  <div class="grid3">
+    <div class="span2 prose">
+      <p class="lede">If you&rsquo;re wondering whether couples therapy or a group may be right for you, reach out first. We&rsquo;ll share current availability, fees, format and eligibility, and talk through whether the service fits what you&rsquo;re looking for.</p>
+      <p>Please say how you prefer to be contacted, whether you are asking about couples therapy or group support, and a little about what brings you here. Please don&rsquo;t include urgent or highly sensitive details in your first message.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="https://cal.com/farahtanis/couples-inquiry" data-cal-link="farahtanis/couples-inquiry" data-cal-namespace="couples-inquiry" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Book a free 15-minute call</a>
+        <a class="btn btn-ghost btn-lg" href="mailto:ftanis@restoreny.org?subject=Couples%20or%20group%20support">Write instead</a>
+      </div>
+    </div>
+    <div>
+      <p class="note">In an emergency, or if you are in danger, please contact your local emergency services or a crisis line rather than this page.</p>
+    </div>
+  </div>
+</section>
+
+<section class="rv band band-slate closing">
+  <p class="pull">You&rsquo;re carrying this together. You don&rsquo;t have to navigate it without support.</p>
+  <div class="leave">
+    <p>Illness, caregiving, grief and loss can affect everyone in a relationship or family differently. If you and your partner &mdash; or others who share this experience &mdash; would like a space to talk, listen and feel less alone, you&rsquo;re invited to inquire about couples therapy or group support.</p>
+  </div>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="#inquire">Inquire about support</a>
+  </div>
+</section>
+
+<footer>
+  <div class="fgrid">
+    <div>
+      <p class="flabel">Menu</p>
+      <ul class="fmenu">
+        <li><a href="index.html#why">Why I offer this</a></li>
+        <li><a href="index.html#what">What we&rsquo;ll do</a></li>
+        <li><a href="index.html#who">Who this is for</a></li>
+        <li><a href="index.html#book">Booking</a></li>
+        <li><a href="couples-and-groups.html" aria-current="page">Couples &amp; groups</a></li>
+        <li><a href="index.html#letter">A love letter</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="flabel">Restore Forward</p>
+      <p>Farah Tanis &middot; Author &middot; Founder, <a href="https://restoreny.org" target="_blank" rel="noopener">Restore Forward</a></p>
+      <p class="booknote">Get the book: <em>What NOT To Do When Your Partner Has Cancer</em> &mdash; coming soon</p>
+      <p>Consultations support the work of Restore Forward</p>
+    </div>
+    <div>
+      <p class="flabel">Book</p>
+      <ul class="fmenu">
+        <li><a href="https://cal.com/farahtanis/30min" data-cal-link="farahtanis/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Book 30 minutes &mdash; $45</a></li>
+        <li><a href="https://cal.com/farahtanis/60min" data-cal-link="farahtanis/60min" data-cal-namespace="60min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Book one hour &mdash; $80</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbase">
+    <p class="fcredit">Website created by <a href="https://lumezia.com" target="_blank" rel="noopener">lumezia.com</a></p>
+    <ul class="social">
+      <li><a class="social-link" href="https://www.facebook.com/farah.tanis/" target="_blank" rel="noopener" aria-label="Farah Tanis on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M13.6 21v-7.6h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.1H7.9v3h2.6V21z"/></svg></a></li>
+      <li><a class="social-link" href="https://www.instagram.com/iamfarahtanis/" target="_blank" rel="noopener" aria-label="Farah Tanis on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.8"/><circle cx="12" cy="12" r="3.9"/><circle class="fill" cx="17.1" cy="6.9" r="1.1"/></svg></a></li>
+      <li><a class="social-link" href="https://x.com/FarahTanis1" target="_blank" rel="noopener" aria-label="Farah Tanis on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h3.5l10.5 15h-3.5z"/><path d="M18.7 4.5l-6 6.9M11.3 13.2l-6 6.3"/></svg></a></li>
+      <li><a class="social-link" href="https://www.linkedin.com/in/farah-tanis/" target="_blank" rel="noopener" aria-label="Farah Tanis on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><circle class="fill" cx="6.6" cy="6.7" r="1.7"/><rect class="fill" x="5.1" y="9.4" width="3" height="9.6"/><path class="fill" d="M10.7 9.4h2.9v1.3c.5-.9 1.6-1.6 3-1.6 2.7 0 3.2 1.8 3.2 4V19h-3v-5.2c0-1.2-.2-2.2-1.5-2.2s-1.7 1-1.7 2.2V19h-2.9z"/></svg></a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  /* Small screens: the menu button opens the full-screen menu, and closes it. */
+  (function(){
+    var header = document.querySelector('.site-top'), btn = document.querySelector('.menu-toggle');
+    if(!header || !btn) return;
+    function set(open){
+      header.classList.toggle('is-open', open);
+      document.documentElement.classList.toggle('menu-open', open);
+      btn.setAttribute('aria-expanded', open);
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
+    }
+    btn.addEventListener('click', function(){ set(!header.classList.contains('is-open')); });
+    header.querySelectorAll('.topnav a').forEach(function(a){ a.addEventListener('click', function(){ set(false); }); });
+    window.addEventListener('resize', function(){ if(window.innerWidth > 900) set(false); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') set(false); });
+  })();
+</script>
+<script>
+  /* The menu bar: hidden while reading down, back on any scroll up. */
+  (function(){
+    var header = document.querySelector('.site-top'), bar = header && header.querySelector('.topbar');
+    if(!bar || !window.requestAnimationFrame) return;
+    var lastY = window.scrollY, travel = 0, queued = false;
+    function update(){
+      queued = false;
+      var y = Math.max(0, window.scrollY), dy = y - lastY, h = header.offsetHeight;
+      lastY = y;
+      if(y <= 0){ header.classList.remove('is-pinned', 'is-shown', 'can-move'); travel = 0; return; }
+      if(!header.classList.contains('is-pinned')){
+        if(y <= h) return;
+        header.classList.add('is-pinned');
+        void bar.offsetHeight;
+        header.classList.add('can-move');
+      }
+      if(header.classList.contains('is-open')) return;
+      travel = (dy > 0) === (travel > 0) ? travel + dy : dy;
+      if(travel < -10) header.classList.add('is-shown');
+      else if(travel > 10 && y > h) header.classList.remove('is-shown');
+    }
+    window.addEventListener('scroll', function(){ if(!queued){ queued = true; requestAnimationFrame(update); } }, {passive:true});
+    update();
+  })();
+</script>
+<script>
+  /* The booking badge shrinks into the corner once the top of the page has gone. */
+  (function(){
+    var badge = document.getElementById('badge');
+    if(!badge) return;
+    var compact = false;
+    function check(){
+      var c = window.scrollY > 120;
+      if(c !== compact){ compact = c; badge.classList.toggle('is-compact', c); }
+    }
+    window.addEventListener('scroll', check, {passive:true});
+    check();
+  })();
+</script>
+<script>
+  /* Parallax on the photograph of the roots. */
+  (function(){
+    var els = [].slice.call(document.querySelectorAll('.px'));
+    if(!els.length || !window.requestAnimationFrame) return;
+    if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var queued = false;
+    function update(){
+      queued = false;
+      var vh = window.innerHeight;
+      els.forEach(function(el){
+        var r = el.getBoundingClientRect();
+        if(r.bottom < 0 || r.top > vh) return;
+        var p = (r.top + r.height / 2 - vh / 2) / ((vh + r.height) / 2);
+        el.style.setProperty('--px', Math.max(-1, Math.min(1, p)).toFixed(4));
+      });
+    }
+    function queue(){ if(!queued){ queued = true; requestAnimationFrame(update); } }
+    window.addEventListener('scroll', queue, {passive:true});
+    window.addEventListener('resize', queue);
+    update();
+  })();
+</script>
+<script>
+  /* Reveal on entry, once per section; every failure path leaves the content visible. */
+  (function(){
+    var root = document.documentElement;
+    if(!root.classList.contains('anim')) return;
+    function showAll(){ root.classList.remove('anim'); }
+    if(!('IntersectionObserver' in window)){ showAll(); return; }
+    try{
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+        });
+      }, {rootMargin:'0px 0px -10% 0px', threshold:0.08});
+      document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+      setTimeout(function(){
+        document.querySelectorAll('.rv:not(.in)').forEach(function(el){
+          if(el.getBoundingClientRect().top < window.innerHeight) el.classList.add('in');
+        });
+      }, 2500);
+    }catch(e){ showAll(); }
+  })();
+</script>
+<!-- Cloudflare Web Analytics, as on the home page: cookieless, real domain only,
+     and ?analytics=off opts a browser out. -->
+<script>
+  (function () {
+    var CF_TOKEN = "aee36a1283884037ad015bedb9a8c114";
+    if (!/(^|\.)farahtanis\.com$/.test(location.hostname)) return;
+    try {
+      if (location.search.indexOf('analytics=off') > -1) localStorage.setItem('ftNoAnalytics', '1');
+      else if (location.search.indexOf('analytics=on') > -1) localStorage.removeItem('ftNoAnalytics');
+      if (localStorage.getItem('ftNoAnalytics') === '1') return;
+    } catch (e) {}
+    var b = document.createElement("script");
+    b.defer = true;
+    b.src = "https://static.cloudflareinsights.com/beacon.min.js";
+    b.setAttribute("data-cf-beacon", JSON.stringify({ token: CF_TOKEN }));
+    document.head.appendChild(b);
+  })();
+</script>
+<!-- Bookings run on Cal.com (cal.com/farahtanis). Each link still works on its own if the
+     embed script is blocked or slow. -->
+<script>
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal.config = Cal.config || {};
+  Cal.config.forwardQueryParams = true;
+  Cal("init", "30min", {origin:"https://app.cal.com"});
+  Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal("init", "60min", {origin:"https://app.cal.com"});
+  Cal.ns["60min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal("init", "couples-inquiry", {origin:"https://app.cal.com"});
+  Cal.ns["couples-inquiry"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  /* Open the Cal overlay ourselves, first (capture phase), rather than relying on the embed's own
+     click handler, which lets the link navigate. If Cal has not loaded, the href takes over. */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('[data-cal-link]');
+    if(!a || e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
+    var ns = a.getAttribute('data-cal-namespace');
+    if(!(window.Cal && Cal.ns && Cal.ns[ns])) return;
+    e.preventDefault();
+    e.stopPropagation();   /* the embed's own handler would open a second overlay on top */
+    Cal.ns[ns]("modal", {calLink: a.getAttribute('data-cal-link'), config: {layout: "month_view"}});
+  }, true);
+</script>
+</body>
+</html>
