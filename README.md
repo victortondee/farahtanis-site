@@ -15,7 +15,7 @@ root, so drafts and working files stay in `project/`.
 
 ## Design
 
-The page follows Restore Forward (restoreny.org), the non-profit this work
+The page follows Restore Forward (restoreny.org), the organization this work
 belongs to: cream `#FFFBF0`, slate `#59637E`, blue-gray `#7C859E`, navy
 `#0C1A2E` for solid buttons and peach `#FFC58E` for the booking badge alone.
 Cormorant Garamond Light for display, Avenir for text (Apple devices) falling
